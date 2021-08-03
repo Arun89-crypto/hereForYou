@@ -1,0 +1,331 @@
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+}
+/* Navigation bar  */
+.navigation__bar__d {
+  width: 10%;
+  padding: 2.5vh 2.5%;
+  background: white;
+  height: 95vh;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ff6b6b;
+}
+.navigation__bar__d button {
+  height: 60px;
+  padding: 10%;
+  width: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ff6b6b;
+  border-radius: 10px;
+  margin: 2.5%;
+  transition: all 0.3s ease;
+}
+.navigation__bar__d button:hover {
+  background: #ff9d9d;
+  color: black;
+}
+@media screen and (max-width: 800px) {
+  .navigation__bar__d button p {
+    display: none;
+  }
+  .navigation__bar__d button img {
+    width: 80%;
+  }
+  .account__pic__d {
+    transform: scale(0.8);
+  }
+}
+.navigation__bar__d img {
+  width: 20%;
+}
+.navigation__bar__d button p {
+  font-size: 12px;
+  text-align: right;
+}
+.account__pic__d {
+  margin: 10%;
+}
+/* MAIN BODY  */
+.body__d {
+  min-width: 80%;
+  max-width: 80%;
+  max-height: 95vh;
+  height: 95vh;
+  background: white;
+  justify-content: start;
+  overflow-y: scroll;
+  padding: 2.5vh 2.5%;
+  flex-direction: column;
+}
+.account__pic__d {
+  height: 60px;
+  width: 60px;
+  background: #e0eafc;
+  background: -webkit-linear-gradient(to right, #cfdef3, #e0eafc);
+  background: linear-gradient(to right, #cfdef3, #e0eafc);
+  border-radius: 50%;
+}
+/* Main  */
+.main__d {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+.stats__d {
+  width: 100%;
+  justify-content: space-between;
+}
+.stats__d img {
+  padding: 5%;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+.stats__d > div {
+  padding: 5%;
+  width: 50%;
+}
+.stats__d > div h2 {
+  background: #ff6b6b;
+  padding: 2.5%;
+  margin: 10px 0px;
+  border-radius: 10px;
+  width: fit-content;
+}
+.badges__d {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.badges__cards {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  overflow: scroll;
+}
+.coupon__cards {
+  min-height: 250px;
+  min-width: 400px;
+  position: relative;
+  padding: 2.5%;
+  flex-direction: column;
+  align-items: flex-start;
+  background-position: center center !important;
+  background-size: cover !important;
+  margin: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.coupon__cards:hover .coupon__card__overlay {
+  display: flex !important;
+}
+.badges__cards::-webkit-scrollbar {
+  display: none;
+}
+.coupon__cards h2 {
+  color: white;
+  font-size: 40px;
+}
+.coupon__cards p {
+  padding: 2.5%;
+  background: white;
+  border-radius: 10px;
+}
+@media screen and (max-width: 500px) {
+  .coupon__cards {
+    transform: scale(0.9);
+  }
+  .stats__d {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  .stats__d > div {
+    padding: 5%;
+    width: 90%;
+  }
+  .stats__d img {
+    display: none;
+  }
+}
+.coupon__card__overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.38);
+  min-width: 150px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  display: none !important;
+}
+/* Graph  */
+
+.graph__d {
+  min-height: 100vh;
+  min-width: 100%;
+  background: white;
+  justify-content: space-evenly;
+}
+.radar {
+  height: 400px;
+  width: 100%;
+}
+.previous__data {
+  background: #ff6b6b;
+  background: white;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5%;
+  overflow-x: scroll;
+  min-height: 200px;
+}
+.previous__data::-webkit-scrollbar {
+  display: none;
+}
+.score__card {
+  flex-direction: column;
+  background: white;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.score__card:hover {
+  transform: scale(1.1);
+  z-index: 2;
+}
+.date__d {
+  font-size: 12px;
+  background: #ff6b6b;
+  height: 50%;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Upcoming Sessions Section */
+.sessions__d {
+  background: white;
+  width: 100%;
+}
+.upper h1,
+.lower > h1 {
+  background: #ff6b6b;
+  width: fit-content;
+  margin: 2% 0%;
+  padding: 2%;
+  border-radius: 20px;
+}
+.upcoming__sessions {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: scroll;
+  width: 100%;
+}
+.upcoming__sessions::-webkit-scrollbar {
+  display: none;
+}
+.session__card {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 200px;
+  width: 150px;
+  background: #4ecdc4;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.session__card > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.session__card p {
+  padding: 10px;
+  background: #f7fff7;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.book__sessions {
+  justify-content: flex-start;
+  overflow-x: scroll;
+  width: 100%;
+  display: flex;
+  background: url("https://images.pexels.com/photos/325649/pexels-photo-325649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+    no-repeat center center;
+  background-size: cover;
+  border-radius: 10px;
+}
+.book__sessions::-webkit-scrollbar {
+  display: none;
+}
+.mood__insert__div {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+}
+.close__insert {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 40px;
+  padding: 10px;
+  cursor: pointer;
+}
+.mood__insert {
+  width: 50%;
+  height: 50%;
+  background: white;
+  padding: 2.5%;
+  border: 1px solid black;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.emojis__div {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5%;
+}
+.emojis__div button {
+  padding: 10px 15px;
+  font-size: 35px;
+  border: none;
+  background: white;
+  border: 2px solid black;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.emojis__div button:hover {
+  background: black;
+}
+@media screen and (max-width: 800px) {
+  .mood__insert {
+    width: 100%;
+    height: 100%;
+  }
+}
