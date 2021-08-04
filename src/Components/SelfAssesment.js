@@ -292,7 +292,7 @@ const Graph = ({ array }) => {
                         pointHoverBorderColor: '#ff6b6b'
                     },
                     {
-                        label: 'Max Value',
+                        label: 'Clinical Value',
                         data: [
                             8,
                             4,

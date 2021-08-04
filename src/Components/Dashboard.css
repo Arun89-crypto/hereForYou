@@ -74,7 +74,17 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  justify-content: space-evenly;
   min-height: 100vh;
+}
+.info__d {
+  padding: 5%;
+  width: 90%;
+  background: #4ecdc4;
+  border-radius: 20px;
+}
+.info__d h2 {
+  font-size: 30px;
 }
 .stats__d {
   width: 100%;
@@ -224,13 +234,21 @@
   background: white;
   width: 100%;
 }
-.upper h1,
-.lower > h1 {
+.book__session__button {
+  justify-content: space-between;
   background: #ff6b6b;
-  width: fit-content;
   margin: 2% 0%;
   padding: 2%;
   border-radius: 20px;
+}
+.book__session__button > button {
+  font-size: 50px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.book__session__button > button:hover {
+  color: white;
 }
 .upcoming__sessions {
   display: flex;

@@ -1,0 +1,65 @@
+.doc__display {
+  flex-direction: column;
+  /* display: none; */
+  position: relative;
+}
+.page__selector__buttons {
+  position: absolute;
+  top: 0px;
+}
+.page__selector__buttons button {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  background: #ff6b6b;
+  font-size: 20px;
+  cursor: pointer;
+}
+.page__selector__buttons button:hover {
+  background: white;
+  color: #ff6b6b;
+}
+.doc__selector {
+  background: #ff6b6b;
+  width: 95%;
+  padding: 2.5%;
+}
+.doc__selection__tab {
+  justify-content: start;
+  overflow-x: scroll;
+}
+.doc__selection__tab::-webkit-scrollbar {
+  display: none;
+}
+.doc__div {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px;
+  font-weight: bold;
+}
+.doc__div:hover {
+  color: #ff6b6b;
+}
+.doc {
+  max-width: 100vw;
+  overflow: scroll;
+  margin-top: 20px;
+}
+.doc__display p {
+  text-align: center;
+  width: 50%;
+}
+@media screen and (max-width: 500px) {
+  .doc {
+    justify-content: start;
+  }
+  .doc__display p {
+    text-align: center;
+    width: 100%;
+  }
+  .doc__div {
+    font-size: 12px;
+  }
+}

@@ -3,13 +3,12 @@ import './Dashboard.css'
 import HomeButton from '../assets/home.png';
 import Graph from '../assets/graph.png';
 import Sessions from '../assets/exam-paper.png';
+import Task from '../assets/task.png';
 import { Link } from 'react-router-dom';
 import LogOut from '../assets/log.png';
 import { HashLink as AppLink } from 'react-router-hash-link';
-import ProgressBar from "@ramonak/react-progress-bar";
 import { Line } from 'react-chartjs-2';
 import PlanCard from './PlanCard';
-import Dino from '../assets/dino.svg'
 import Close from '../assets/close.png';
 import { commerce } from '../lib/Commerce';
 
@@ -78,26 +77,6 @@ const emojis = [
     '😇',
     '😂'
 ]
-const upcomingSessions = [
-    {
-        id: 1,
-        name_of_taker: 'Mrs. Judith',
-        img: 'https://picsum.photos/200',
-        date: '12/7/21'
-    },
-    {
-        id: 2,
-        name_of_taker: 'Mr. Anish',
-        img: 'https://picsum.photos/300',
-        date: '15/7/21'
-    },
-    {
-        id: 3,
-        name_of_taker: 'Mr. Rajesh',
-        img: 'https://picsum.photos/400',
-        date: '15/7/21'
-    }
-]
 const coupons = [
     {
         id: 1,
@@ -125,7 +104,6 @@ const coupons = [
     },
 ]
 
-
 function Dashboard() {
 
     useEffect(() => {
@@ -148,7 +126,6 @@ function Dashboard() {
         setProducts(data);
         console.log(data);
     }
-
     return (
         <div className="dashboard flex__spacebetween">
             <div className="navigation__bar__d flex__center">
@@ -183,6 +160,12 @@ function Dashboard() {
                             <p>Sessions</p>
                         </button>
                     </AppLink>
+                    <Link to='/assessment' style={{ textDecoration: 'none' }}>
+                        <button className="flex__spacebetween">
+                            <img src={Task} alt=''></img>
+                            <p>Assesment</p>
+                        </button>
+                    </Link>
                     <Link to='/' style={{ textDecoration: 'none' }}>
                         <button className="flex__spacebetween">
                             <img src={LogOut} alt=''></img>
@@ -223,19 +206,9 @@ function Dashboard() {
 const Main = () => {
     return (
         <div id='main__d' className="main__d flex__center">
-            <div className="stats__d flex__center">
-                <div>
-                    <div>
-                        <h2>Sessions Done</h2>
-                        <h1>12</h1>
-                    </div>
-                    <div>
-                        <h2>Improvement</h2>
-                        <h1>80%</h1>
-                        <ProgressBar completed={80} width='120px' bgColor='#ff6b6b' isLabelVisible={false} />
-                    </div>
-                </div>
-                <img src={Dino} alt=''></img>
+            <div className="info__d">
+                <h2>Name</h2>
+                <p>E-mail</p>
             </div>
             <div className="badges__d flex__center">
                 <h1>Badges Earned</h1>
@@ -334,28 +307,11 @@ const GraphPage = () => {
 const SessionsPage = ({ products }) => {
     return (
         <div id='sessions__d' className='sessions__d'>
-            <div className="upper">
-                <h1>Sessions</h1>
-                <div className="upcoming__sessions flex__center">
-                    {
-                        upcomingSessions.map((session) => {
-                            const { name_of_taker, id, img, date } = session;
-                            return (
-                                <div className=
-                                    "session__card flex__center" key={id}>
-                                    <div>
-                                        <h2>{name_of_taker}</h2>
-                                        <p>{date}</p>
-                                    </div>
-                                    <img src={img} alt=''></img>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-            </div>
             <div className="lower">
-                <h1>Book Session</h1>
+                <div className="book__session__button flex__center">
+                    <h1>Book Session</h1>
+                    <button>&#8594;</button>
+                </div>
                 <div className="book__sessions">
                     {
                         products.map((item) => {
@@ -366,6 +322,7 @@ const SessionsPage = ({ products }) => {
                     }
                 </div>
             </div>
+            <div className=""></div>
         </div>
     )
 }

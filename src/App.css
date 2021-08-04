@@ -64,6 +64,7 @@
   width: 50px;
   height: 50px;
   background: #ff6b6b;
+  box-shadow: 0px 0px 5px black;
   position: fixed;
   top: 5%;
   right: 4%;
@@ -244,8 +245,8 @@
     width: 90%;
   }
   .main__left__section > h1 {
-    font-size: 6rem;
-    line-height: 6rem;
+    font-size: 5rem;
+    line-height: 5rem;
   }
   .signin__page,
   .signup__page {
@@ -255,11 +256,24 @@
   .navbar {
     width: 90%;
   }
+  .main__right__section > img {
+    width: 70%;
+    padding: 15%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .main__left__section > h1 {
+    font-size: 6rem;
+    line-height: 6rem;
+  }
 }
 @media screen and (max-width: 500px) {
   .main__left__section > h1 {
     font-size: 4rem;
     line-height: 4rem;
+  }
+  .main__right__section > img {
+    display: none;
   }
 }
 
@@ -623,7 +637,8 @@
     flex-direction: column-reverse;
   }
   .self__help__main > img {
-    width: 85%;
+    width: 70%;
+    padding: 15%;
   }
   .self__help__main > div {
     width: 90%;
@@ -634,6 +649,11 @@
   }
   .self__help__main > div > p {
     width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .self__help__main > img {
+    display: none;
   }
 }
 /* music section  */
