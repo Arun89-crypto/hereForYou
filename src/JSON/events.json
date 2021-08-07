@@ -1,0 +1,50 @@
+{
+    "current_events": [
+        {
+            "name": "Name of the event",
+            "image": "https://images.pexels.com/photos/7648476/pexels-photo-7648476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula v.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula v.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi.",
+            "meetLink": "meet link or venue",
+            "date": "12/08/2021",
+            "time": "12:05 pm",
+            "ongoing": true,
+            "free": true
+        },
+        {
+            "name": "Name of the event",
+            "image": "https://images.pexels.com/photos/7648476/pexels-photo-7648476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula v.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula v.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi.",
+            "meetLink": "meet link or venue",
+            "date": "12/08/2021",
+            "time": "12:05 pm",
+            "ongoing": true,
+            "free": false
+        },
+        {
+            "name": "Name of the event",
+            "image": "https://images.pexels.com/photos/7648476/pexels-photo-7648476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula v.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula v.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi.",
+            "meetLink": "meet link or venue",
+            "date": "12/08/2021",
+            "time": "12:05 pm",
+            "ongoing": false,
+            "free": true
+        }
+    ],
+    "upcoming_events": [
+        {
+            "name": "Name of the event",
+            "image": "https://cdn.pixabay.com/photo/2017/11/20/02/00/fantasy-2964231_1280.jpg",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula v.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula v.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi.",
+            "link": "link to register",
+            "date": "12/08/2021"
+        },
+        {
+            "name": "Name of the event",
+            "image": "https://cdn.pixabay.com/photo/2017/11/20/02/00/fantasy-2964231_1280.jpg",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula v.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula v.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi.",
+            "link": "link to register",
+            "date": "12/08/2021"
+        }
+    ]
+}

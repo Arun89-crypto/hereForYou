@@ -1,0 +1,70 @@
+{
+    "main__members": [
+        {
+            "id": 0,
+            "name": "Prof. M. Thirunavukarasu (Dr. Thiru)",
+            "info": "Dr Thiru was born in a small village in Tamil Nadu, India, from there he rose to complete his D.P.M (1979) & M.D (1981) in Psychiatry in Madras Medical College, Chennai. Dr. Thru is one of the few South east Asian Doctors to get a sponsored Post-Doctoral training at Jewish Hospital attached to Washington University in St.Louis, Missouri, USA in 1988. Dr. Thiru is the author of multiple award-winning books,  he is a teacher, mentor & a researcher with over 35 years of experience in the field of Mental Health. Dr. Thiru is one of the most renowned Psychiatrist in the South East Asian Region, Ex- President Indian Psychiatric Society (2011) & Board Member and Zonal Representative for Southern Asia of World Psychiatric Association (2011-14). He’ s currently the Head, Dept. of Psychiatry, SRM MCH & RC, Chennai, India.",
+            "role": "Chief Patron"
+        },
+        {
+            "id": 1,
+            "name": "Dr. Manik Inder Singh (MI Singh)",
+            "info": "MI was born with a stethoscope in his hands (No kidding he snatched his father’s steth’.) grew up in a big fat Punjabi joint-family where the dining table discussions were about the latest medical research. MI is a third-generation doctor, currently a M.D Psychiatry Resident with a Fellowship in Mental Health Education, from NIMHANS, Bengaluru, International Resident Fellow of the American Psychiatric Association, Executive Director of a Peer support organization “The Listening Space”, Principal Investigator of the Here for You® Mental Health Application & is the Regional Lead SEAR for International Working Group Health Systems Strengthening (IWG). MI is a clinician researcher with primary interest in technological advancements in Mental Health. MI is a LGBTQ+ Ally, Pokémon master & an avid Advocate of Mental Health with an aim of creating innovative, sustainable Health Care services. When he’s not working, you can spot him with his dogs or playing squash.",
+            "role": "Founder"
+        },
+        {
+            "id": 2,
+            "name": "Miss Ann Sarah Paul (ASP)",
+            "info": "ASP was born and brought up in a Kottayam, situated in God’s own country (Kerala). ASP after finishing her schooling from Pallikoodam, did her bachelors in psychology (1st Class with Distinction) from Women’s Christian College, Chennai. Then she moved to Bangalore to pursue her Masters from Montfort College (where she topped the University). ASP is a RCI licensed Clinical Psychologist, with a M.Phil. in Clinical Psychology from SRM IST, Chennai with over 5 years of experience in conducting assessments, individual & group psychotherapy. ASP is currently working as an Assistant Professor in Dept. of Clinical Psychology SRIHER, Chennai. ASP has a knack of making tough & difficult to remember concepts easy. When not with a client or in class can be spotted with one of her six dogs.",
+            "role": "Co-Founder"
+        },
+        {
+            "id": 3,
+            "name": "Dr. Pradeep Atter",
+            "info": "ADr. Pradeep loves chunky peanut butter. Now that's out there, he's an Anaesthesiologist currently pursuing his certification in Cardiac Anaesthesiology from All India Institute of Medical Sciences, Rishikesh. He has certifications in Pallitive Care from IAPC and Critical Care from SCCM. He is also the COO and Co-Founder of ProjectLife Medtech Pvt Ltd which is currently building medical ecosystems, trying to promote equity in healthcare. A guy who loves everything digital, he started coding in 4th standard. He is also a massive Chelsea fan. His interests include telemedicine, pain and palliative care and cognitive impacts of pain in intensive care on patients.",
+            "role": "Director"
+        }
+    ],
+    "team_members": [
+        {
+            "id": 0,
+            "name": "Shruti Choubey"
+        },
+        {
+            "id": 1,
+            "name": "Shikhar Rastogi"
+        },
+        {
+            "id": 2,
+            "name": "Ritika Kakde"
+        },
+        {
+            "id": 3,
+            "name": "Manisha"
+        },
+        {
+            "id": 4,
+            "name": "Madhav Mehta"
+        },
+        {
+            "id": 5,
+            "name": "Khushboo Yadav"
+        },
+        {
+            "id": 6,
+            "name": "Kavya Tripathi"
+        },
+        {
+            "id": 7,
+            "name": "Mananpreet Kaur"
+        },
+        {
+            "id": 8,
+            "name": "Charvi Pareek"
+        },
+        {
+            "id": 9,
+            "name": "Aliya Kausar"
+        }
+    ]
+}

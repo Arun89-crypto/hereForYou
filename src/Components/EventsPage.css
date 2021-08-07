@@ -1,0 +1,100 @@
+.events__page {
+  width: 95%;
+  padding: 2.5%;
+}
+.events__page__header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
+    url("https://images.pexels.com/photos/7648510/pexels-photo-7648510.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+      center center no-repeat;
+  background-size: cover;
+
+  font-size: 4rem;
+  color: #ff6b6b;
+}
+.upcoming__events,
+.current__events {
+  display: flex;
+  flex-direction: column;
+}
+.upcoming_events_container,
+.events_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: scroll;
+  padding: 2.5%;
+  width: 95%;
+}
+.upcoming_events_container::-webkit-scrollbar,
+.events_container::-webkit-scrollbar {
+  display: none;
+}
+.event__card {
+  display: flex;
+  justify-content: space-between;
+  max-width: 50%;
+  background: #ff6b6b;
+  padding: 2.5%;
+  border-radius: 10px;
+  margin: 10px;
+  min-width: 50%;
+}
+.event__card > img {
+  width: 40%;
+  min-height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.event__card > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 50%;
+}
+.event__card button {
+  padding: 10px;
+  border: none;
+  margin: 10px 0px;
+  background: #ffe66d;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.event__card > div > p {
+  font-size: 12px;
+  text-align: justify;
+}
+.event__card > div > div > p {
+  font-size: 12px;
+  text-align: justify;
+}
+.event__card > div > div {
+  display: flex;
+}
+.date__ecard {
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+@media screen and (max-width: 800px) {
+  .event__card {
+    max-height: 400px;
+    min-height: 400px;
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .event__card > div > p {
+    font-size: 12px;
+    display: none;
+  }
+  .events__page__header {
+    font-size: 3rem;
+  }
+}

@@ -136,6 +136,7 @@ function HomePage() {
             <BlogPage />
             <FaqComponent />
             <PlansSection />
+            <Collaborators />
             <Footer />
             {
                 (assesment) ? (<SelfAssesment setAssesment={setAssesment} />) : ''
@@ -187,6 +188,14 @@ function HomePage() {
                                 Self Help
                                 <div className='underline'></div>
                             </Link>
+                            <Link to='/about' style={{ textDecoration: 'none' }} className='nav__link'>
+                                About
+                                <div className='underline'></div>
+                            </Link>
+                            <Link to='/events' style={{ textDecoration: 'none' }} className='nav__link'>
+                                Events
+                                <div className='underline'></div>
+                            </Link>
                             <AppLink
                                 smooth
                                 to="/#faqs"
@@ -213,6 +222,15 @@ function HomePage() {
     );
 }
 
+
+const Collaborators = () => {
+    return (
+        <div className="collaborators">
+            <h1>Collaborators</h1>
+            <div className="collaborator__grid"></div>
+        </div>
+    )
+}
 
 const MainPage = ({ setSignIn, setSingUp }) => {
     return (

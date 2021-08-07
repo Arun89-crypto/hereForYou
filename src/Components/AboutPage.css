@@ -1,0 +1,121 @@
+.about__header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
+    url("https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+      center center no-repeat;
+  background-size: cover;
+  font-size: 4rem;
+  color: #ffe66d;
+}
+.about__page {
+  flex-direction: column;
+  padding: 2.5%;
+  width: 95%;
+}
+.section {
+  width: 100%;
+  text-align: justify;
+}
+.team__section {
+  margin-top: 5%;
+}
+.member__card {
+  flex-direction: column;
+  width: 320px;
+  margin: 10px;
+  background: rgb(225, 225, 225);
+  padding: 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.member__card:hover {
+  color: white;
+  background: rgb(35, 35, 35);
+}
+.member__card:hover .member__image {
+  border-radius: 10px;
+  width: 150px;
+  height: 150px;
+}
+
+.member__card > h2 {
+  font-size: 13px;
+  margin: 10px 0px;
+}
+.member__card > h3 {
+  font-size: 13px;
+}
+.main__members {
+  display: grid;
+  grid-template-columns: repeat(3, 0fr);
+  width: 100%;
+  justify-content: center;
+}
+.member__card > p {
+  font-size: 12px;
+  max-height: 100px;
+  overflow: scroll;
+  width: 90%;
+  text-align: justify;
+}
+.member__image {
+  width: 100px;
+  height: 100px;
+  background: #ffe66d;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.small {
+  width: 160px;
+  padding: 20px;
+}
+.team {
+  display: grid;
+  grid-template-columns: repeat(5, 0fr);
+  width: 100%;
+  justify-content: center;
+}
+@media screen and (max-width: 1150px) {
+  .team {
+    grid-template-columns: repeat(4, 0fr);
+  }
+  .main__members {
+    grid-template-columns: repeat(2, 0fr);
+  }
+}
+@media screen and (max-width: 885px) {
+  .team {
+    grid-template-columns: repeat(3, 0fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .main__members {
+    grid-template-columns: repeat(1, 0fr);
+  }
+  .team {
+    grid-template-columns: repeat(2, 0fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  .team {
+    grid-template-columns: repeat(1, 0fr);
+  }
+  .about__header {
+    font-size: 3rem;
+  }
+  .member__card {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .member__card {
+    width: 250px;
+  }
+}
+.member__image > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}

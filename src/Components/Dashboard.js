@@ -239,16 +239,16 @@ const GraphPage = () => {
                 <Line
                     data={{
                         labels: [
-                            '😡 (1)',
-                            '😠 (2)',
-                            '😭 (3)',
-                            '😢 (4)',
-                            '😞 (5)',
-                            '🙂 (6)',
-                            '😊 (7)',
-                            '😃 (8)',
-                            '😇 (9)',
-                            '😂 (10)'
+                            '😡',
+                            '😠',
+                            '😭',
+                            '😢',
+                            '😞',
+                            '🙂',
+                            '😊',
+                            '😃',
+                            '😇',
+                            '😂'
                         ],
                         datasets: [
                             {
@@ -276,13 +276,14 @@ const GraphPage = () => {
                                     display: true,
                                 }
                             },
-                            x: {
+                            x: [{
                                 title: {
                                     text: 'Mood Score',
                                     color: '#ff6b6b',
                                     display: true,
+
                                 }
-                            }
+                            }]
                         },
                         maintainAspectRatio: false,
                     }}

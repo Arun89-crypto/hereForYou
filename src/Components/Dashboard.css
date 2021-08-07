@@ -287,10 +287,10 @@
   overflow-x: scroll;
   width: 100%;
   display: flex;
-  background: url("https://images.pexels.com/photos/325649/pexels-photo-325649.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
-    no-repeat center center;
+  background: url("../assets/bg/bgplan.png") no-repeat center center;
   background-size: cover;
   border-radius: 10px;
+  background-size: cover;
 }
 .book__sessions::-webkit-scrollbar {
   display: none;

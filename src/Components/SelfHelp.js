@@ -75,6 +75,14 @@ const Navbar = ({ setNav }) => {
                     E-Books
                     <div className='underline'></div>
                 </AppLink>
+                <Link to='/about' style={{ textDecoration: 'none' }} className='nav__link'>
+                    About
+                    <div className='underline'></div>
+                </Link>
+                <Link to='/events' style={{ textDecoration: 'none' }} className='nav__link'>
+                    Events
+                    <div className='underline'></div>
+                </Link>
             </div>
         </div>
     );
