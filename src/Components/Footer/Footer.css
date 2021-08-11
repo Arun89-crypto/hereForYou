@@ -72,7 +72,7 @@
   margin: 10px;
   font-size: 12px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1070px) {
   .footer {
     grid-template-columns: repeat(1, 0fr);
     width: auto;

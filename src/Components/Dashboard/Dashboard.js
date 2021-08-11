@@ -345,21 +345,22 @@ const SessionsPage = () => {
 const InfoPage = () => {
     const [name, setName] = useState('Enter your name');
     const [editName, setEditName] = useState(false);
-
+    // here we will write the function for pushing the name in db
     const [phone, setPhone] = useState('Enter your phone number');
     const [editPhone, setEditPhone] = useState(false);
-
+    // here we will write the function for pushing the phone in db
     const [age, setAge] = useState('Enter your Age');
     const [editAge, setEditAge] = useState(false);
-
+    // here we will write the function for pushing the age in db
     const [language, setLanguage] = useState('Enter your language preferences');
     const [editLanguage, setEditLanguage] = useState(false);
-
+    // here we will write the function for pushing the language in db
     const [therapist, setTherapist] = useState('Enter your gender preference(Therapist)');
     const [editTherapist, setEditTherapist] = useState(false);
-
+    // here we will write the function for pushing the therapist in db
     const [history, setHistory] = useState('If you have any medical/mental history please add');
     const [editHistory, setEditHistory] = useState(false);
+    // here we will write the function for pushing the history in db
     return (
         <div className="info__page" id='info__d'>
             <h1>Info</h1>

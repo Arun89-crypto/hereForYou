@@ -9,7 +9,9 @@ function Footer() {
 
             <div className="footer">
                 <div className="left__footer flex__center">
-                    <img src={Logo} alt=''></img>
+                    <Link to='/'>
+                        <img src={Logo} alt=''></img>
+                    </Link>
                 </div>
                 <div>
                     <div className="right__footer">
@@ -19,11 +21,14 @@ function Footer() {
                         <Link to='/selfhelp' style={{ textDecoration: 'none' }} className='nav__link'>
                             Self Help
                         </Link>
-                        <Link to='/selfhelp' style={{ textDecoration: 'none' }} className='nav__link'>
+                        <Link to='/about' style={{ textDecoration: 'none' }} className='nav__link'>
                             About
                         </Link>
-                        <Link to='/selfhelp' style={{ textDecoration: 'none' }} className='nav__link'>
+                        <Link to='/events' style={{ textDecoration: 'none' }} className='nav__link'>
                             Events
+                        </Link>
+                        <Link to='/admin' style={{ textDecoration: 'none' }} className='nav__link'>
+                            Admin
                         </Link>
                     </div>
                 </div>
