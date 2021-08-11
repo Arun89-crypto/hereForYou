@@ -290,7 +290,7 @@
   overflow-x: scroll;
   width: 100%;
   display: flex;
-  background: url("../assets/bg/bgplan.png") no-repeat center center;
+  background: url("../../assets/bg/bgplan.png") no-repeat center center;
   background-size: cover;
   border-radius: 10px;
   background-size: cover;

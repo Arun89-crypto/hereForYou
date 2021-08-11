@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
-import MainSvg from '../assets/undraw_mindfulness_scgo.svg';
-import Menu from '../assets/menu.svg';
-import Close from '../assets/close.png';
-import Logo from '../assets/logo.svg';
+import MainSvg from '../../assets/undraw_mindfulness_scgo.svg';
+import Menu from '../../assets/menu.svg';
+import Close from '../../assets/close.png';
+import Logo from '../../assets/logo.svg';
 import { Link } from 'react-router-dom';
-import TeamPic from '../assets/tem.svg';
+import TeamPic from '../../assets/tem.svg';
 import { HashLink as AppLink } from 'react-router-hash-link';
-import Question from './Question';
-import PlanCard from './PlanCard';
-import Footer from './Footer';
-import GoToTop from './GoToTop';
-import SignIn from './SignIn';
-import SignUp from './SignUp';
-import SelfAssesment from './SelfAssesment';
+import Question from './Questions/Question';
+import PlanCard from '../PlanCard';
+import Footer from '../Footer/Footer';
+import GoToTop from '../GoToTop';
+import SignIn from '../SignIn';
+import SignUp from '../SignUp';
+import SelfAssesment from '../SelfAssessment/SelfAssesment';
 
 const cards = [
     {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Plus from '../assets/plus.png';
-import Minus from '../assets/minus.png';
+import Plus from '../../../assets/plus.png';
+import Minus from '../../../assets/minus.png';
 
 function Question({ id, question, answer }) {
     const [show, setShow] = useState(false);

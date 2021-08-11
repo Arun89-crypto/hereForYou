@@ -1,0 +1,145 @@
+.self__help__main {
+  min-height: 90vh;
+  width: 90%;
+  background: #ffe66d;
+  padding: 5%;
+}
+.self__help__main > img {
+  width: 45%;
+  padding: 2.5%;
+}
+.self__help__main > div {
+  width: 50%;
+  color: #ff6b6b;
+}
+.self__help__main > div > h1 {
+  font-size: 11rem;
+  line-height: 11rem;
+}
+.self__help__main > div > p {
+  margin-top: 5%;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 80%;
+}
+@media screen and (max-width: 1000px) {
+  .self__help__main {
+    min-height: 100vh;
+    flex-direction: column-reverse;
+  }
+  .self__help__main > img {
+    width: 70%;
+    padding: 15%;
+  }
+  .self__help__main > div {
+    width: 90%;
+  }
+  .self__help__main > div > h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+  .self__help__main > div > p {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .self__help__main > img {
+    display: none;
+  }
+  .self__help__main {
+    justify-content: center;
+  }
+}
+/* music section  */
+.music {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  margin-top: 20px;
+  padding: 2.5%;
+}
+.music > h1 {
+  font-size: 50px;
+  background: #ff6b6b;
+  padding: 5%;
+  border-radius: 20px;
+  color: #1a535c;
+}
+.music__section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 95%;
+  overflow: scroll;
+  padding: 2.5%;
+}
+.youtube__frame {
+  margin: 1%;
+  border-radius: 20px;
+}
+.music__section::-webkit-scrollbar {
+  display: none;
+}
+.spotifiy-button {
+  background: white;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20%;
+  min-width: 300px;
+  padding: 2%;
+  margin: 2.5%;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.spotifiy-button > p {
+  width: 40%;
+  padding: 2.5%;
+  text-align: justify;
+  font-weight: bold;
+}
+.spotifiy-button:hover {
+  filter: invert(1);
+}
+.spotifiy-button > img {
+  width: 40%;
+  padding: 2.5%;
+}
+@media screen and (max-width: 750px) {
+  .music {
+    flex-direction: column;
+  }
+  .music > h1 {
+    padding: 5%;
+    border-radius: 10px;
+  }
+}
+
+/* meditation section */
+.meditate__section {
+  padding: 2.5%;
+  width: 95%;
+}
+.meditate__section > h1 {
+  font-size: 50px;
+}
+.meditate__section > div {
+  width: 95%;
+  padding: 2.5%;
+}
+.meditate__section > div > p {
+  text-align: justify;
+}
+.meditate__section > div > img {
+  width: 60%;
+}
+@media screen and (max-width: 1000px) {
+  .meditate__section > div {
+    flex-direction: column;
+  }
+  .meditate__section > div > img {
+    width: 100%;
+  }
+}

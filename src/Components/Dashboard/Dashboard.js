@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import './Dashboard.css'
-import HomeButton from '../assets/home.png';
-import Graph from '../assets/graph.png';
-import Sessions from '../assets/exam-paper.png';
+import HomeButton from '../../assets/home.png';
+import Graph from '../../assets/graph.png';
+import Sessions from '../../assets/exam-paper.png';
 import { Link } from 'react-router-dom';
-import LogOut from '../assets/log.png';
+import LogOut from '../../assets/log.png';
 import { HashLink as AppLink } from 'react-router-hash-link';
 import { Line } from 'react-chartjs-2';
-import PlanCard from './PlanCard';
-import Close from '../assets/close.png';
+import PlanCard from '../PlanCard';
+import Close from '../../assets/close.png';
 
 
 const data = [
@@ -123,7 +123,7 @@ function Dashboard() {
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            // setInsert(true);
+            setInsert(true);
         }, 3000);
         return () => clearTimeout(timer);
     }, []);

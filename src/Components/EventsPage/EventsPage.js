@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import Eventdata from '../JSON/events.json';
+import Eventdata from '../../JSON/events.json';
 import './EventsPage.css';
-import Menu from '../assets/menu.svg';
+import Menu from '../../assets/menu.svg';
 import { Link } from 'react-router-dom';
-import Close from '../assets/close.png';
-import Footer from './Footer';
-import GoToTop from './GoToTop';
+import Close from '../../assets/close.png';
+import Footer from '../Footer/Footer';
+import GoToTop from '../GoToTop';
 
 
 function EventsPage() {

@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from 'react'
 import './AboutPage.css';
-import Footer from './Footer';
-import GoToTop from './GoToTop';
-import Data from '../JSON/members.json';
-import ManikSingh from '../assets/people/ManikSingh.JPG';
-import Chief from '../assets/people/Chief.jpeg';
-import ShrutiChaubey from '../assets/people/ShrutiChoubey.jpg'
-import ShikharRastogi from '../assets/people/ShikharRastogi.jpg'
-import Ritika from '../assets/people/Ritika.jpeg'
-import Manisha from '../assets/people/Manisha.jpg'
-import MadhavMehta from '../assets/people/MadhavMehta.jpg'
-import KhushbooYadav from '../assets/people/KhushbooYadav.jpg'
-import Kavya from '../assets/people/Kavya.jpeg'
-import Mananpreet from '../assets/people/Mananpreet.jpg'
-import CharviPareek from '../assets/people/CharviPareek.jpg'
-import Aaliya from '../assets/people/Aaliya.jpeg'
-import AnnSarah from '../assets/people/AnnSarah.jpg';
-import PradeepAtter from '../assets/people/PradeepAtter.JPG';
-import Menu from '../assets/menu.svg';
+import Footer from '../Footer/Footer';
+import GoToTop from '../GoToTop';
+import Data from '../../JSON/members.json';
+import ManikSingh from '../../assets/people/ManikSingh.JPG';
+import Chief from '../../assets/people/Chief.jpeg';
+import ShrutiChaubey from '../../assets/people/ShrutiChoubey.jpg'
+import ShikharRastogi from '../../assets/people/ShikharRastogi.jpg'
+import Ritika from '../../assets/people/Ritika.jpeg'
+import Manisha from '../../assets/people/Manisha.jpg'
+import MadhavMehta from '../../assets/people/MadhavMehta.jpg'
+import KhushbooYadav from '../../assets/people/KhushbooYadav.jpg'
+import Kavya from '../../assets/people/Kavya.jpeg'
+import Mananpreet from '../../assets/people/Mananpreet.jpg'
+import CharviPareek from '../../assets/people/CharviPareek.jpg'
+import Aaliya from '../../assets/people/Aaliya.jpeg'
+import AnnSarah from '../../assets/people/AnnSarah.jpg';
+import PradeepAtter from '../../assets/people/PradeepAtter.JPG';
+import Menu from '../../assets/menu.svg';
 import { Link } from 'react-router-dom';
-import Close from '../assets/close.png';
+import Close from '../../assets/close.png';
 
 
 const main__members = [

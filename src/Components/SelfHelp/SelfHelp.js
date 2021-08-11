@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
-import Menu from '../assets/menu.svg';
-import Close from '../assets/close.png';
-import Logo from '../assets/logo.svg';
+import Menu from '../../assets/menu.svg';
+import Close from '../../assets/close.png';
+import Logo from '../../assets/logo.svg';
 import { HashLink as AppLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
-import Help from '../assets/Help.svg';
-import Meditation from '../assets/meditation.svg';
-import Footer from './Footer';
-import GoToTop from './GoToTop';
-
+import Help from '../../assets/Help.svg';
+import Meditation from '../../assets/meditation.svg';
+import Footer from '../Footer/Footer';
+import GoToTop from '../GoToTop';
+import './SelfHelp.css'
 
 function SelfHelp() {
     const [nav, setNav] = useState(false);

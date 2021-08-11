@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import Close from '../assets/close.png';
-import Depression from '../assets/Psychosis.jpeg';
+import Close from '../../assets/close.png';
+import Depression from '../../assets/Psychosis.jpeg';
 import { Line } from 'react-chartjs-2';
 import ProgressBar from "@ramonak/react-progress-bar";
-
+import './SelfAssesment.css'
 
 const QuestionsAssesment = [
     {
