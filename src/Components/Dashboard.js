@@ -3,14 +3,12 @@ import './Dashboard.css'
 import HomeButton from '../assets/home.png';
 import Graph from '../assets/graph.png';
 import Sessions from '../assets/exam-paper.png';
-import Task from '../assets/task.png';
 import { Link } from 'react-router-dom';
 import LogOut from '../assets/log.png';
 import { HashLink as AppLink } from 'react-router-hash-link';
 import { Line } from 'react-chartjs-2';
 import PlanCard from './PlanCard';
 import Close from '../assets/close.png';
-import { commerce } from '../lib/Commerce';
 
 
 const data = [
@@ -103,29 +101,33 @@ const coupons = [
         img: 'https://images.pexels.com/photos/3753025/pexels-photo-3753025.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'
     },
 ]
-
+const cards = [
+    {
+        name: "4 sessions combo",
+        price: "₹4,399.00"
+    },
+    {
+        name: "8 sessions combo",
+        price: "₹8,399.00"
+    },
+    {
+        name: "IQ Assignment",
+        price: "₹1,500.00"
+    },
+    {
+        name: "Personality Assessment",
+        price: "₹1,500.00"
+    },
+]
 function Dashboard() {
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setInsert(true);
+            // setInsert(true);
         }, 3000);
         return () => clearTimeout(timer);
     }, []);
     const [insert, setInsert] = useState(false);
-
-
-    //fetching the products
-
-    useEffect(() => {
-        fetchProducts();
-    }, [])
-    const [products, setProducts] = useState([]);
-    const fetchProducts = async () => {
-        const { data } = await commerce.products.list();
-        setProducts(data);
-        console.log(data);
-    }
     return (
         <div className="dashboard flex__spacebetween">
             <div className="navigation__bar__d flex__center">
@@ -160,12 +162,6 @@ function Dashboard() {
                             <p>Sessions</p>
                         </button>
                     </AppLink>
-                    <Link to='/assessment' style={{ textDecoration: 'none' }}>
-                        <button className="flex__spacebetween">
-                            <img src={Task} alt=''></img>
-                            <p>Assesment</p>
-                        </button>
-                    </Link>
                     <Link to='/' style={{ textDecoration: 'none' }}>
                         <button className="flex__spacebetween">
                             <img src={LogOut} alt=''></img>
@@ -179,7 +175,7 @@ function Dashboard() {
             <div className="body__d flex__spacebetween">
                 <Main />
                 <GraphPage />
-                <SessionsPage products={products} />
+                <SessionsPage />
             </div>
             {
                 (insert) ? (
@@ -260,7 +256,8 @@ const GraphPage = () => {
                                 pointBackgroundColor: '#ff6b6b',
                                 pointBorderColor: '#fff',
                                 pointHoverBackgroundColor: '#fff',
-                                pointHoverBorderColor: '#ff6b6b'
+                                pointHoverBorderColor: '#ff6b6b',
+                                tension: 0.4,
                             }
                         ]
                     }}
@@ -276,14 +273,14 @@ const GraphPage = () => {
                                     display: true,
                                 }
                             },
-                            x: [{
+                            x: {
                                 title: {
                                     text: 'Mood Score',
                                     color: '#ff6b6b',
                                     display: true,
 
                                 }
-                            }]
+                            }
                         },
                         maintainAspectRatio: false,
                     }}
@@ -305,19 +302,22 @@ const GraphPage = () => {
         </>
     )
 }
-const SessionsPage = ({ products }) => {
+const SessionsPage = () => {
     return (
         <div id='sessions__d' className='sessions__d'>
             <div className="lower">
                 <div className="book__session__button flex__center">
                     <h1>Book Session</h1>
-                    <button>&#8594;</button>
+                    <a href='https://store64241106.company.site/' target='_blank' rel='noreferrer'>
+                        <button>Go to Shop &#8594;</button>
+                    </a>
                 </div>
                 <div className="book__sessions">
                     {
-                        products.map((item) => {
+                        cards.map((item) => {
+                            const { name, price } = item;
                             return (
-                                <PlanCard id={item.id} name={item.name} price={item.price.formatted_with_symbol} desc={item.description}></PlanCard>
+                                <PlanCard name={name} price={price}></PlanCard>
                             )
                         })
                     }

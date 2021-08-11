@@ -15,6 +15,8 @@ import Kavya from '../assets/people/Kavya.jpeg'
 import Mananpreet from '../assets/people/Mananpreet.jpg'
 import CharviPareek from '../assets/people/CharviPareek.jpg'
 import Aaliya from '../assets/people/Aaliya.jpeg'
+import AnnSarah from '../assets/people/AnnSarah.jpg';
+import PradeepAtter from '../assets/people/PradeepAtter.JPG';
 import Menu from '../assets/menu.svg';
 import { Link } from 'react-router-dom';
 import Close from '../assets/close.png';
@@ -28,10 +30,10 @@ const main__members = [
         image: ManikSingh
     },
     {
-        image: ManikSingh
+        image: AnnSarah
     },
     {
-        image: ManikSingh
+        image: PradeepAtter
     }
 ]
 const team = [

@@ -10,7 +10,9 @@
   height: 95vh;
   flex-direction: column;
   justify-content: space-between;
-  background: #ff6b6b;
+  background: #0f2027;
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
 }
 .navigation__bar__d button {
   height: 60px;
@@ -19,14 +21,14 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: #ff6b6b;
+  color: black;
   border-radius: 10px;
   margin: 2.5%;
   transition: all 0.3s ease;
+  filter: invert(1);
 }
 .navigation__bar__d button:hover {
-  background: #ff9d9d;
-  color: black;
+  background: rgb(182, 182, 182);
 }
 @media screen and (max-width: 800px) {
   .navigation__bar__d button p {
@@ -80,8 +82,11 @@
 .info__d {
   padding: 5%;
   width: 90%;
-  background: #4ecdc4;
+  background: #0f2027;
+  background: -webkit-linear-gradient(to left, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(to left, #2c5364, #203a43, #0f2027);
   border-radius: 20px;
+  color: white;
 }
 .info__d h2 {
   font-size: 30px;
@@ -112,6 +117,9 @@
   align-items: flex-start;
   width: 100%;
 }
+.badges__d > h1 {
+  color: white;
+}
 .badges__cards {
   display: flex;
   align-items: center;
@@ -132,9 +140,9 @@
   border-radius: 20px;
   cursor: pointer;
 }
-.coupon__cards:hover .coupon__card__overlay {
+/* .coupon__cards:hover .coupon__card__overlay {
   display: flex !important;
-}
+} */
 .badges__cards::-webkit-scrollbar {
   display: none;
 }
@@ -190,8 +198,6 @@
   width: 100%;
 }
 .previous__data {
-  background: #ff6b6b;
-  background: white;
   width: 90%;
   display: flex;
   align-items: center;
@@ -206,16 +212,14 @@
 }
 .score__card {
   flex-direction: column;
-  background: white;
   justify-content: space-between;
   padding: 20px;
   font-size: 20px;
   margin: 10px;
   border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
   cursor: pointer;
   transition: all 0.3s ease;
+  background: #343a40;
 }
 .score__card:hover {
   transform: scale(1.1);
@@ -231,7 +235,6 @@
 
 /* Upcoming Sessions Section */
 .sessions__d {
-  background: white;
   width: 100%;
 }
 .book__session__button {
@@ -241,13 +244,13 @@
   padding: 2%;
   border-radius: 20px;
 }
-.book__session__button > button {
-  font-size: 50px;
+.book__session__button > a > button {
+  font-size: 20px;
   background: none;
   border: none;
   cursor: pointer;
 }
-.book__session__button > button:hover {
+.book__session__button > a > button:hover {
   color: white;
 }
 .upcoming__sessions {

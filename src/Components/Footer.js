@@ -1,94 +1,46 @@
 import React from 'react'
 import Logo from '../assets/logo.svg';
 import { Link } from 'react-router-dom';
-import { HashLink as AppLink } from 'react-router-hash-link';
-import Insta from '../assets/links/instagram.svg';
-import Twitter from '../assets/links/twitter.png';
-import LinkedIn from '../assets/links/linked.svg';
-import Facebook from '../assets/links/facebook.png';
 
 
 function Footer() {
     return (
-        <div className="footer">
-            <div>
-                <div className="left__footer">
+        <div className='footer_m flex__center'>
+
+            <div className="footer">
+                <div className="left__footer flex__center">
                     <img src={Logo} alt=''></img>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus</p>
                 </div>
-                <div className="right__footer">
-                    <AppLink
-                        smooth
-                        to="/#whyus"
-                        style={{ textDecoration: 'none' }} className='nav__link'>
-                        Why Us ?
-                        <div className='underline'></div>
-                    </AppLink>
-                    <Link to='/blogpage' style={{ textDecoration: 'none' }} className='nav__link'>
-                        Blogs
-                        <div className='underline'></div>
-                    </Link>
-                    <Link to='/selfhelp' style={{ textDecoration: 'none' }} className='nav__link'>
-                        Self Help
-                        <div className='underline'></div>
-                    </Link>
-                    <AppLink
-                        smooth
-                        to="/#faqs"
-                        style={{ textDecoration: 'none' }} className='nav__link'>
-                        FAQ's
-                        <div className='underline'></div>
-                    </AppLink>
-                    <AppLink
-                        smooth
-                        to='/#plans'
-                        style={{ textDecoration: 'none' }} className='nav__link'>
-                        Plans
-                        <div className='underline'></div>
-                    </AppLink>
-                    <AppLink
-                        smooth
-                        to='/selfhelp/#ebooks'
-                        style={{ textDecoration: 'none' }} className='nav__link'>
-                        E-Books
-                        <div className='underline'></div>
-                    </AppLink>
-                    <AppLink
-                        smooth
-                        to='/selfhelp/#medit'
-                        style={{ textDecoration: 'none' }} className='nav__link'>
-                        Meditation
-                        <div className='underline'></div>
-                    </AppLink>
-                    <AppLink
-                        smooth
-                        to="/selfhelp/#music"
-                        style={{ textDecoration: 'none' }} className='nav__link'>
-                        Music
-                        <div className='underline'></div>
-                    </AppLink>
-                    <AppLink
-                        smooth
-                        to='/#selfhelp'
-                        style={{ textDecoration: 'none' }} className='nav__link'>
-                        Self Assesment
-                        <div className='underline'></div>
-                    </AppLink>
+                <div>
+                    <div className="right__footer">
+                        <Link to='/blogpage' style={{ textDecoration: 'none' }} className='nav__link'>
+                            Blogs
+                        </Link>
+                        <Link to='/selfhelp' style={{ textDecoration: 'none' }} className='nav__link'>
+                            Self Help
+                        </Link>
+                        <Link to='/selfhelp' style={{ textDecoration: 'none' }} className='nav__link'>
+                            About
+                        </Link>
+                        <Link to='/selfhelp' style={{ textDecoration: 'none' }} className='nav__link'>
+                            Events
+                        </Link>
+                    </div>
                 </div>
-            </div>
-            <div className="social__links flex__center">
-                <a href='https://www.instagram.com/hereforyou.io/' target='_blank' rel="noreferrer">
-                    <img src={Insta} alt=''></img>
-                </a>
-                <a href='https://twitter.com/hereforyou_io' target='_blank' rel="noreferrer">
-                    <img src={Twitter} alt=''></img>
-                </a>
-                <a href='#'>
-                    <img src={Facebook} alt=''></img>
-                </a>
-                <a href='https://www.linkedin.com/company/here-for-you-in/' target='_blank' rel="noreferrer">
-                    <img src={LinkedIn} alt=''></img>
-                </a>
+                <div className="social__links">
+                    <a href='https://www.instagram.com/hereforyou.io/' target='_blank' rel="noreferrer">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.22 510.01"><defs></defs><path class="cls-1" d="M870.39,284.1h176.26c1.34,1.93,3.34.87,5,.94,18.4.76,36.78,1.63,54.76,6.07,45.37,11.19,77.82,37.68,95.32,81.39,9.84,24.56,12.1,50.49,12.18,76.62q.25,87.86,0,175.71c0,18.57-1,37.14-4.91,55.4-10,46.56-35.77,80.54-80,99.46-23.71,10.15-49,12.41-74.41,13.23-53.91,1.72-107.84,1.23-161.75.69-26.48-.27-53.09-.27-79.14-6.59-42.13-10.22-73.43-34.08-92.12-73.5-10.61-22.38-14.39-46.44-15.15-70.94q-3.18-102.51,0-205c.52-16.58,2.26-33.07,6.7-49.15,11.9-43.18,38-73.95,79.77-90.85,23.26-9.41,47.8-11.66,72.58-12.48C867.07,285,869.09,286.08,870.39,284.1Zm89.48,464c13.44,0,26.89.14,40.33,0,29-.35,58.16.61,86.92-4,39-6.27,65-28,75.57-66.72,4.31-15.8,4.89-32.08,5.39-48.33,1.6-51.6,1.2-103.22.62-154.83-.23-20.38-.5-40.8-3.45-61.07-5.82-40-30.28-67.5-68.93-76.93-18.36-4.48-37.16-4.74-55.88-5.12-44.63-.91-89.27-.84-133.91-.37-25.53.27-51.18-.46-76.42,4.29-38.1,7.18-63,29.08-72.87,67.11-4.51,17.49-4.8,35.45-5.29,53.35-1.13,41.14-1.07,82.31-.68,123.46.28,28.52-.38,57.12,3.63,85.47,3.83,27.14,15.44,49.94,38.88,65.37,16.94,11.16,36.22,15.08,56.11,16.4C886.51,748.55,923.2,748.07,959.87,748.1Z" transform="translate(-704.8 -284.1)" /><path class="cls-1" d="M959.84,670.06c-72.36-.25-131-59-130.89-131.11.13-72.29,58.94-131,131.12-130.8,72.44.15,131,58.77,130.82,131S1031.92,670.3,959.84,670.06Zm-.11-46.15a84.86,84.86,0,1,0-84.63-84.83A84.61,84.61,0,0,0,959.73,623.91Z" transform="translate(-704.8 -284.1)" /><path class="cls-1" d="M1126.59,402.86a30.51,30.51,0,1,1-30.67-30.43A30.39,30.39,0,0,1,1126.59,402.86Z" transform="translate(-704.8 -284.1)" /></svg>
+                    </a>
+                    <a href='https://twitter.com/hereforyou_io' target='_blank' rel="noreferrer">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 628 516.52"><defs><style></style></defs><path class="cls-1" d="M1256.46,291.24c-8.39,27.55-26.35,47.62-48.86,63.66,10.35,2,10.4,2.2,31.41-3.64,10.52-2.93,20.8-6.68,31.2-10.05l1.56,2.3c-13.38,22.21-31.84,39.76-52,55.57-6.11,4.8-8.53,9.66-8.38,17.64,3,156.34-100.79,326.47-282.2,366.82-96.86,21.54-188.94,8.72-275.39-40.89a74.51,74.51,0,0,1-6.6-4.36c-.61-.44-.91-1.32-1.85-2.78,68.78,5.83,130.56-11.22,187.8-53.78-59.33-6.49-99.14-35.15-120.54-90.22,19.48.58,37.14,2.79,55.51-3.09C705,568.35,670.62,526.77,666.3,459.15c19,8.66,36.58,14.88,58.13,15.61-32.8-25-52-56.07-56.06-95.32-2.81-27,2.61-52.55,16.07-76.5,5.61.78,7.32,5.82,10.34,9.16,66.55,73.28,148.71,115.21,247.57,124.17,9.67.88,11.3-.77,9.73-10.81-8.25-52.57,19-106.22,66.13-132.19A129.28,129.28,0,0,1,1167,309.94c7.82,7,14.16,7.47,23.45,5.2,22.79-5.56,43.5-16.11,64.88-25.09C1255.73,290.44,1256.1,290.84,1256.46,291.24Z" transform="translate(-645.36 -277.08)" /><path class="cls-1" d="M1255.36,290.05c.14-1.12.43-2.2,1.83-1.4.19.1-.47,1.68-.73,2.58Z" transform="translate(-645.36 -277.08)" /><path class="cls-1" d="M1270.21,341.21l3.14.16-1.58,2.14Z" transform="translate(-645.36 -277.08)" /></svg>
+                    </a>
+                    <a href='/'>
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 638.54 638.6"><path d="M959.37,220.2q140.66,0,281.31,0c18,0,30.73,8.54,36,23.84a42,42,0,0,1,2.07,13.72q0,281.61,0,563.23c0,22.58-15,37.61-37.44,37.64-51.43.08-102.86,0-154.28.15-5,0-6.24-1.2-6.23-6.21q.26-117.36,0-234.73c0-5.56,1.82-6.39,6.72-6.35,23.71.23,47.44,0,71.15.22,4.5,0,5.81-1.1,6.36-5.63q5.27-43.19,11.3-86.27c.68-4.83-1.38-4.91-5-4.9-27.94.1-55.87,0-83.8.16-4.9,0-6.85-.81-6.73-6.38.4-19.5-.06-39,.24-58.51.44-29.59,13.84-43,43.34-43.48,16.4-.28,32.81-.24,49.21,0,4.42.06,6-.7,6-5.63-.28-25.27-.22-50.54,0-75.81,0-3.95-.93-5.19-5-5.48-32-2.29-64.06-5.81-96.15-1-50.75,7.56-87,44.42-94.83,95.57-3.2,21-2.15,42-2.39,63-.12,10.86-.22,21.72.08,32.58.12,4.12-1,5.16-5.14,5.12-23.72-.2-47.44,0-71.15-.2-5,0-6.77.9-6.71,6.4q.48,42.22,0,84.45c-.06,5.23,1.57,6,6.29,6,23.71-.24,47.44,0,71.15-.21,4.22,0,5.58.91,5.57,5.39q-.23,118,0,236.07c0,4.7-1.29,5.81-5.89,5.8q-149-.19-297.93-.13c-22.28,0-37.15-14.81-37.15-37q-.08-282.29,0-564.57c0-22.62,14.65-36.8,37.85-36.82Q818.72,220.15,959.37,220.2Z" transform="translate(-640.17 -220.19)" /></svg>
+                    </a>
+                    <a href='https://www.linkedin.com/company/here-for-you-in/' target='_blank' rel="noreferrer">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 638.3 609.96"><defs><style></style></defs><path class="cls-1" d="M998.69,492.76c14.43-18,30-31.72,47.11-44.14,67-48.78,185.06-26.94,219.42,71.81,10,28.59,14,58,14.13,88,.18,76.84,0,153.67.2,230.51,0,5.28-1.71,6.05-6.41,6q-62.12-.27-124.23,0c-5.44,0-6.38-1.66-6.37-6.63q.23-105.63.09-211.24c0-19.35-2-38.37-9.14-56.62-19.12-48.59-79.61-46.75-106.92-22-17.57,15.9-27.77,35.12-27.72,59.33.07,41.18-.12,82.37-.16,123.55,0,35.65-.1,71.3.1,106.95,0,5-1,6.72-6.46,6.69q-62.12-.37-124.23,0c-4.92,0-6.25-1.11-6.24-6.16q.23-199.6,0-399.23c0-5.51,1.76-6.41,6.72-6.39q61.79.29,123.56,0c5.07,0,6.83,1.06,6.71,6.48C998.45,456.67,998.69,473.72,998.69,492.76Z" transform="translate(-641.25 -235.05)" /><path class="cls-1" d="M786.33,639q0,99.28.12,198.59c0,5.51-.84,7.48-7.07,7.43q-61.77-.51-123.55,0c-5.41,0-6.4-1.62-6.39-6.63q.19-199.24,0-398.51c0-4.77.61-6.8,6.27-6.76q62.1.42,124.21,0c5.35,0,6.51,1.5,6.5,6.63Q786.19,539.36,786.33,639Z" transform="translate(-641.25 -235.05)" /><path class="cls-1" d="M717.48,377.18c-34.87,0-62.12-17.94-72.24-47.63-14.61-42.87,12.39-86.74,57.24-93.22,19-2.75,37.57-1.41,54.94,7.33,26.79,13.49,40.89,41.71,37,73.11-3.45,28-25.15,51.24-53.95,57.74A97.3,97.3,0,0,1,717.48,377.18Z" transform="translate(-641.25 -235.05)" /></svg>
+                    </a>
+                </div>
             </div>
             <div className="conditions flex__center">
                 <Link to='/termsandconditionshfu' style={{ textDecoration: 'none' }} className='nav__link'>

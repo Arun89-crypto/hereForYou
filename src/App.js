@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AboutPage from './Components/AboutPage';
-import AssessmentPage from './Components/AssessmentPage';
 import BlogsPage from './Components/BlogsPage';
 import Dashboard from './Components/Dashboard';
 import EventsPage from './Components/EventsPage';
@@ -28,9 +27,6 @@ function App() {
           </Route>
           <Route path='/about'>
             <AboutPage />
-          </Route>
-          <Route path='/assessment'>
-            <AssessmentPage />
           </Route>
           <Route path='/dashboard'>
             <Dashboard />

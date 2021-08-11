@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import MainSvg from '../assets/undraw_mindfulness_scgo.svg';
 import Menu from '../assets/menu.svg';
 import Close from '../assets/close.png';
@@ -13,10 +13,25 @@ import GoToTop from './GoToTop';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 import SelfAssesment from './SelfAssesment';
-import { commerce } from '../lib/Commerce';
 
-
-
+const cards = [
+    {
+        name: "4 sessions combo",
+        price: "₹4,399.00"
+    },
+    {
+        name: "8 sessions combo",
+        price: "₹8,399.00"
+    },
+    {
+        name: "IQ Assignment",
+        price: "₹1,500.00"
+    },
+    {
+        name: "Personality Assessment",
+        price: "₹1,500.00"
+    },
+]
 const Catags = [
     {
         id: '1',
@@ -99,30 +114,33 @@ const Catags = [
         name: 'BEHAVIOUR PATTERNS & NEGATIVE THOUGHT PATTERNS'
     },
 ]
-
 const Questions = [
     {
         id: '1',
-        question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus ?',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula v.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula v.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula'
+        question: 'What should I take Therapy or Counselling?',
+        answer: 'Counselling is an unstructured & non directive way of putting the facts in front of someone to enable them to take a decision which is least harmful for them & others. It aims to develop a safe relationship, within which an individual can explore personal difficulties and develop deeper understanding of themselves.Therapy better known as Psychotherapy is a scientific, evidence based interactive process(sitting on a couch is optional) which brings a change in the individual which is beneficial to them.Ideally, Therapy should be administered by Trained professionals(Psychiatrists & Clinical Psychologists), since a wrong technique may have adverse outcomes(just like side effects from a medicine you buy from that shady guy who calls him self a doctor, around the corner).'
     },
     {
         id: '2',
-        question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus ?',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula v.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula v.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula'
+        question: 'Why should I pay? Is it not like paying a friend to listen to you rant?',
+        answer: 'Well, unfortunately it doesn’t work like how you see on Netflix, we do more than just talking. we talk more than just about your Daddy issues. The Mental Health Professionals we have on board, have undergone rigorous training, spent countless nights studying (well most nights), just to help you with your issues. Whereas, all a friend will do is take your money(score some J, get you high on Dutch courage) give you some gyaan (advice which may or may not work).'
     },
     {
         id: '3',
-        question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus ?',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula v.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula v.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula'
+        question: 'Is my information safe? Can I trust the person I am consulting?',
+        answer: 'Well, Consultations here at HFY are like Vegas, it’s a safe space where what happens here, stays here. Building a good & honest therapeutic relationship is the only way you will benefit of these consultations (please, tell us everything honestly even if you like pineapple on your Pizza, DON’T WORRY WE DON’T JUDGE, some of us here at HFY would gladly eat it and that too with Ketchup).'
     },
     {
         id: '4',
-        question: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus ?',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula v.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula v.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a quam iaculis, sagittis nunc id, feugiat purus. Morbi in pulvinar mi. Vestibulum hendrerit nisi nulla, vel malesuada ligula porttitor quis. Suspendisse id lectus volutpat, dictum ligula'
+        question: 'My friend said, don’t go to a Psychiatrist, their Medications are addictive, is that true?',
+        answer: 'This urban myth is as old as Shaktiman (or maybe older). Medicines if taken as prescribed by a Psychiatrist (No cheating here, no refilling your old prescription from that friendly bespectacled pharmacy uncle or taking a medicine from that know-it-all aunty whose uncle’s son was prescribed the same medication for Anxiety) will not cause dependence. On an average, a psychiatrist spends 10 years in Medical School to help people with addictions recover. However, some medications are prescribed for a long time, sometimes a lifetime of course, but do you call every other old person on a medicine to control their Blood Pressure, addicted to those medicines (our pills work the same way, different Pharmacology of course, If you’re interested to learn about that check our Courses for you Section.)'
+    },
+    {
+        id: '5',
+        question: 'If I’m taking a consultation does that make me weak? ',
+        answer: 'Being Healthy in general is a utopian concept, doesn’t exist in real life (if we go by the Standard Definition of Health and not mere absence of disease.) Similarly, on this journey of life, our body which is our vehicle sometimes breaks down (akin to having a physical or mental health problem) in these cases you can fix the vehicle yourself or ask for professional help (If calling a mechanic to fix your car makes you weak; well maybe it’s time to re-define strength).'
     }
 ]
-
 function HomePage() {
     const [signIn, setSignIn] = useState(false);
     const [signUp, setSignUp] = useState(false);
@@ -134,6 +152,16 @@ function HomePage() {
             <WhyUs />
             <SelfHelp setAssesment={setAssesment} />
             <BlogPage />
+            <div className="counter__section flex__center">
+                <div className="flex__center">
+                    <h1>Lives Enriched</h1>
+                    <h2>302</h2>
+                </div>
+                <div className="flex__center">
+                    <h1>Therapy Hours</h1>
+                    <h2>1526</h2>
+                </div>
+            </div>
             <FaqComponent />
             <PlansSection />
             <Collaborators />
@@ -325,23 +353,15 @@ const FaqComponent = () => {
 }
 
 const PlansSection = () => {
-    useEffect(() => {
-        fetchProducts();
-    }, [])
-    const [products, setProducts] = useState([]);
-    const fetchProducts = async () => {
-        const { data } = await commerce.products.list();
-        setProducts(data);
-        console.log(data);
-    }
     return (
         <div className="plans__section" id='plans'>
             <h1>Our Plans</h1>
             <div className="plan__cards__cont flex__center">
                 {
-                    products.map((item) => {
+                    cards.map((item) => {
+                        const { name, price } = item;
                         return (
-                            <PlanCard id={item.id} name={item.name} price={item.price.formatted_with_symbol} desc={item.description}></PlanCard>
+                            <PlanCard name={name} price={price}></PlanCard>
                         )
                     })
                 }
