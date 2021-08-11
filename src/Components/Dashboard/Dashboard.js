@@ -9,7 +9,7 @@ import { HashLink as AppLink } from 'react-router-hash-link';
 import { Line } from 'react-chartjs-2';
 import PlanCard from '../PlanCard';
 import Close from '../../assets/close.png';
-
+import Info from '../../assets/info.svg';
 
 const data = [
     {
@@ -123,7 +123,7 @@ function Dashboard() {
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setInsert(true);
+            // setInsert(true);
         }, 3000);
         return () => clearTimeout(timer);
     }, []);
@@ -162,6 +162,16 @@ function Dashboard() {
                             <p>Sessions</p>
                         </button>
                     </AppLink>
+                    <AppLink
+                        smooth
+                        to="/dashboard/#info__d"
+                        style={{ textDecoration: 'none' }}
+                    >
+                        <button className="flex__spacebetween">
+                            <img src={Info} alt=''></img>
+                            <p>Info</p>
+                        </button>
+                    </AppLink>
                     <Link to='/' style={{ textDecoration: 'none' }}>
                         <button className="flex__spacebetween">
                             <img src={LogOut} alt=''></img>
@@ -176,6 +186,7 @@ function Dashboard() {
                 <Main />
                 <GraphPage />
                 <SessionsPage />
+                <InfoPage />
             </div>
             {
                 (insert) ? (
@@ -202,12 +213,17 @@ function Dashboard() {
 const Main = () => {
     return (
         <div id='main__d' className="main__d flex__center">
-            <div className="info__d">
-                <h2>Name</h2>
-                <p>E-mail</p>
+            <div className="info__d flex__center">
+                <div>
+                    <h2>Name</h2>
+                    <p>E-mail</p>
+                </div>
+                <div>
+                    <p>Sessions count</p>
+                    <p className="counter__sessions">2/4</p>
+                </div>
             </div>
             <div className="badges__d flex__center">
-                <h1>Badges Earned</h1>
                 <div className="badges__cards">
                     {
                         coupons.map((c) => {
@@ -323,7 +339,218 @@ const SessionsPage = () => {
                     }
                 </div>
             </div>
-            <div className=""></div>
+        </div>
+    )
+}
+const InfoPage = () => {
+    const [name, setName] = useState('Enter your name');
+    const [editName, setEditName] = useState(false);
+
+    const [phone, setPhone] = useState('Enter your phone number');
+    const [editPhone, setEditPhone] = useState(false);
+
+    const [age, setAge] = useState('Enter your Age');
+    const [editAge, setEditAge] = useState(false);
+
+    const [language, setLanguage] = useState('Enter your language preferences');
+    const [editLanguage, setEditLanguage] = useState(false);
+
+    const [therapist, setTherapist] = useState('Enter your gender preference(Therapist)');
+    const [editTherapist, setEditTherapist] = useState(false);
+
+    const [history, setHistory] = useState('If you have any medical/mental history please add');
+    const [editHistory, setEditHistory] = useState(false);
+    return (
+        <div className="info__page" id='info__d'>
+            <h1>Info</h1>
+            <div className="info__portal flex__center">
+                <div className="feild flex__center">
+                    <div>
+                        {
+                            (editName) ? (
+                                <input type='text' id='name__field' value={name} onChange={(e) => setName(e.target.value)}></input>
+                            ) : (
+                                <p>{name}</p>
+                            )
+                        }
+                    </div>
+                    <div>
+                        {
+                            (editName) ? (
+                                <div>
+
+                                    <button onClick={() => setEditName(false)}>
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" className='edit__img'><rect x="7" y="14" width="4" height="4" /><path d="M20.12,8.71,15.29,3.88A3,3,0,0,0,13.17,3H10V9h5a1,1,0,0,1,0,2H9a1,1,0,0,1-1-1V3H6A3,3,0,0,0,3,6V18a3,3,0,0,0,3,3H8V17a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2v4h2a3,3,0,0,0,3-3V10.83A3,3,0,0,0,20.12,8.71Z" transform="translate(-3 -3)" /></svg>
+                                    </button>
+                                    <button onClick={() => setEditName(false)}>
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.99 14.99" className='edit__img'><path d="M8,.5a7.5,7.5,0,1,0,5.3,2.2A7.44,7.44,0,0,0,8,.5Zm0,1A6.51,6.51,0,1,1,1.5,8c0-.21,0-.42,0-.62A6.48,6.48,0,0,1,8,1.5ZM10.47,5h0a.53.53,0,0,0-.34.15L8,7.29,5.88,5.17A.55.55,0,0,0,5.52,5a.5.5,0,0,0-.35.86L7.29,8,5.17,10.12a.5.5,0,0,0,.69.72h0L8,8.71l2.12,2.12a.5.5,0,0,0,.71,0,.49.49,0,0,0,0-.7v0L8.71,8l2.12-2.12a.5.5,0,0,0,0-.71A.46.46,0,0,0,10.47,5Z" transform="translate(-0.5 -0.5)" /></svg>
+                                    </button>
+                                </div>
+                            ) : (
+                                <button onClick={() => setEditName(true)}>
+                                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" className='edit__img' style={{ fill: "#A9A9A9" }}><path d="M3,17.46v3a.5.5,0,0,0,.5.5h3a.47.47,0,0,0,.35-.15L17.81,9.94,14.06,6.19,3.15,17.1A.49.49,0,0,0,3,17.46ZM20.71,7a1,1,0,0,0,0-1.41L18.37,3.29a1,1,0,0,0-1.41,0L15.13,5.12l3.75,3.75Z" transform="translate(-3 -3)" /></svg>
+                                </button>
+                            )
+                        }
+
+                    </div>
+                </div>
+                <div className="feild flex__center">
+                    <div>
+                        {
+                            (editPhone) ? (
+                                <input type='text' id='phone__field' value={phone} onChange={(e) => setPhone(e.target.value)}></input>
+                            ) : (
+                                <p>{phone}</p>
+                            )
+                        }
+                    </div>
+                    <div>
+                        {
+                            (editPhone) ? (
+                                <div>
+
+                                    <button onClick={() => setEditPhone(false)}>
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" className='edit__img'><rect x="7" y="14" width="4" height="4" /><path d="M20.12,8.71,15.29,3.88A3,3,0,0,0,13.17,3H10V9h5a1,1,0,0,1,0,2H9a1,1,0,0,1-1-1V3H6A3,3,0,0,0,3,6V18a3,3,0,0,0,3,3H8V17a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2v4h2a3,3,0,0,0,3-3V10.83A3,3,0,0,0,20.12,8.71Z" transform="translate(-3 -3)" /></svg>
+                                    </button>
+                                    <button onClick={() => setEditPhone(false)}>
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.99 14.99" className='edit__img'><path d="M8,.5a7.5,7.5,0,1,0,5.3,2.2A7.44,7.44,0,0,0,8,.5Zm0,1A6.51,6.51,0,1,1,1.5,8c0-.21,0-.42,0-.62A6.48,6.48,0,0,1,8,1.5ZM10.47,5h0a.53.53,0,0,0-.34.15L8,7.29,5.88,5.17A.55.55,0,0,0,5.52,5a.5.5,0,0,0-.35.86L7.29,8,5.17,10.12a.5.5,0,0,0,.69.72h0L8,8.71l2.12,2.12a.5.5,0,0,0,.71,0,.49.49,0,0,0,0-.7v0L8.71,8l2.12-2.12a.5.5,0,0,0,0-.71A.46.46,0,0,0,10.47,5Z" transform="translate(-0.5 -0.5)" /></svg>
+                                    </button>
+                                </div>
+                            ) : (
+                                <button onClick={() => setEditPhone(true)}>
+                                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" className='edit__img' style={{ fill: "#A9A9A9" }}><path d="M3,17.46v3a.5.5,0,0,0,.5.5h3a.47.47,0,0,0,.35-.15L17.81,9.94,14.06,6.19,3.15,17.1A.49.49,0,0,0,3,17.46ZM20.71,7a1,1,0,0,0,0-1.41L18.37,3.29a1,1,0,0,0-1.41,0L15.13,5.12l3.75,3.75Z" transform="translate(-3 -3)" /></svg>
+                                </button>
+                            )
+                        }
+
+                    </div>
+                </div>
+                <div className="feild flex__center">
+                    <div>
+                        {
+                            (editAge) ? (
+                                <input type='text' id='age__field' value={age} onChange={(e) => setAge(e.target.value)}></input>
+                            ) : (
+                                <p>{age}</p>
+                            )
+                        }
+                    </div>
+                    <div>
+                        {
+                            (editAge) ? (
+                                <div>
+
+                                    <button onClick={() => setEditAge(false)}>
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" className='edit__img'><rect x="7" y="14" width="4" height="4" /><path d="M20.12,8.71,15.29,3.88A3,3,0,0,0,13.17,3H10V9h5a1,1,0,0,1,0,2H9a1,1,0,0,1-1-1V3H6A3,3,0,0,0,3,6V18a3,3,0,0,0,3,3H8V17a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2v4h2a3,3,0,0,0,3-3V10.83A3,3,0,0,0,20.12,8.71Z" transform="translate(-3 -3)" /></svg>
+                                    </button>
+                                    <button onClick={() => setEditAge(false)}>
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.99 14.99" className='edit__img'><path d="M8,.5a7.5,7.5,0,1,0,5.3,2.2A7.44,7.44,0,0,0,8,.5Zm0,1A6.51,6.51,0,1,1,1.5,8c0-.21,0-.42,0-.62A6.48,6.48,0,0,1,8,1.5ZM10.47,5h0a.53.53,0,0,0-.34.15L8,7.29,5.88,5.17A.55.55,0,0,0,5.52,5a.5.5,0,0,0-.35.86L7.29,8,5.17,10.12a.5.5,0,0,0,.69.72h0L8,8.71l2.12,2.12a.5.5,0,0,0,.71,0,.49.49,0,0,0,0-.7v0L8.71,8l2.12-2.12a.5.5,0,0,0,0-.71A.46.46,0,0,0,10.47,5Z" transform="translate(-0.5 -0.5)" /></svg>
+                                    </button>
+                                </div>
+                            ) : (
+                                <button onClick={() => setEditAge(true)}>
+                                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" className='edit__img' style={{ fill: "#A9A9A9" }}><path d="M3,17.46v3a.5.5,0,0,0,.5.5h3a.47.47,0,0,0,.35-.15L17.81,9.94,14.06,6.19,3.15,17.1A.49.49,0,0,0,3,17.46ZM20.71,7a1,1,0,0,0,0-1.41L18.37,3.29a1,1,0,0,0-1.41,0L15.13,5.12l3.75,3.75Z" transform="translate(-3 -3)" /></svg>
+                                </button>
+                            )
+                        }
+
+                    </div>
+                </div>
+                <div className="feild flex__center">
+                    <div>
+                        {
+                            (editLanguage) ? (
+                                <input type='text' id='lang__field' value={language} onChange={(e) => setLanguage(e.target.value)}></input>
+                            ) : (
+                                <p>{language}</p>
+                            )
+                        }
+                    </div>
+                    <div>
+                        {
+                            (editLanguage) ? (
+                                <div>
+
+                                    <button onClick={() => setEditLanguage(false)}>
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" className='edit__img'><rect x="7" y="14" width="4" height="4" /><path d="M20.12,8.71,15.29,3.88A3,3,0,0,0,13.17,3H10V9h5a1,1,0,0,1,0,2H9a1,1,0,0,1-1-1V3H6A3,3,0,0,0,3,6V18a3,3,0,0,0,3,3H8V17a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2v4h2a3,3,0,0,0,3-3V10.83A3,3,0,0,0,20.12,8.71Z" transform="translate(-3 -3)" /></svg>
+                                    </button>
+                                    <button onClick={() => setEditLanguage(false)}>
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.99 14.99" className='edit__img'><path d="M8,.5a7.5,7.5,0,1,0,5.3,2.2A7.44,7.44,0,0,0,8,.5Zm0,1A6.51,6.51,0,1,1,1.5,8c0-.21,0-.42,0-.62A6.48,6.48,0,0,1,8,1.5ZM10.47,5h0a.53.53,0,0,0-.34.15L8,7.29,5.88,5.17A.55.55,0,0,0,5.52,5a.5.5,0,0,0-.35.86L7.29,8,5.17,10.12a.5.5,0,0,0,.69.72h0L8,8.71l2.12,2.12a.5.5,0,0,0,.71,0,.49.49,0,0,0,0-.7v0L8.71,8l2.12-2.12a.5.5,0,0,0,0-.71A.46.46,0,0,0,10.47,5Z" transform="translate(-0.5 -0.5)" /></svg>
+                                    </button>
+                                </div>
+                            ) : (
+                                <button onClick={() => setEditLanguage(true)}>
+                                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" className='edit__img' style={{ fill: "#A9A9A9" }}><path d="M3,17.46v3a.5.5,0,0,0,.5.5h3a.47.47,0,0,0,.35-.15L17.81,9.94,14.06,6.19,3.15,17.1A.49.49,0,0,0,3,17.46ZM20.71,7a1,1,0,0,0,0-1.41L18.37,3.29a1,1,0,0,0-1.41,0L15.13,5.12l3.75,3.75Z" transform="translate(-3 -3)" /></svg>
+                                </button>
+                            )
+                        }
+
+                    </div>
+                </div>
+                <div className="feild flex__center">
+                    <div>
+                        {
+                            (editTherapist) ? (
+                                <input type='text' id='therapist__field' value={therapist} onChange={(e) => setTherapist(e.target.value)}></input>
+                            ) : (
+                                <p>{therapist}</p>
+                            )
+                        }
+                    </div>
+                    <div>
+                        {
+                            (editTherapist) ? (
+                                <div>
+
+                                    <button onClick={() => setEditTherapist(false)}>
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" className='edit__img'><rect x="7" y="14" width="4" height="4" /><path d="M20.12,8.71,15.29,3.88A3,3,0,0,0,13.17,3H10V9h5a1,1,0,0,1,0,2H9a1,1,0,0,1-1-1V3H6A3,3,0,0,0,3,6V18a3,3,0,0,0,3,3H8V17a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2v4h2a3,3,0,0,0,3-3V10.83A3,3,0,0,0,20.12,8.71Z" transform="translate(-3 -3)" /></svg>
+                                    </button>
+                                    <button onClick={() => setEditTherapist(false)}>
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.99 14.99" className='edit__img'><path d="M8,.5a7.5,7.5,0,1,0,5.3,2.2A7.44,7.44,0,0,0,8,.5Zm0,1A6.51,6.51,0,1,1,1.5,8c0-.21,0-.42,0-.62A6.48,6.48,0,0,1,8,1.5ZM10.47,5h0a.53.53,0,0,0-.34.15L8,7.29,5.88,5.17A.55.55,0,0,0,5.52,5a.5.5,0,0,0-.35.86L7.29,8,5.17,10.12a.5.5,0,0,0,.69.72h0L8,8.71l2.12,2.12a.5.5,0,0,0,.71,0,.49.49,0,0,0,0-.7v0L8.71,8l2.12-2.12a.5.5,0,0,0,0-.71A.46.46,0,0,0,10.47,5Z" transform="translate(-0.5 -0.5)" /></svg>
+                                    </button>
+                                </div>
+                            ) : (
+                                <button onClick={() => setEditTherapist(true)}>
+                                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" className='edit__img' style={{ fill: "#A9A9A9" }}><path d="M3,17.46v3a.5.5,0,0,0,.5.5h3a.47.47,0,0,0,.35-.15L17.81,9.94,14.06,6.19,3.15,17.1A.49.49,0,0,0,3,17.46ZM20.71,7a1,1,0,0,0,0-1.41L18.37,3.29a1,1,0,0,0-1.41,0L15.13,5.12l3.75,3.75Z" transform="translate(-3 -3)" /></svg>
+                                </button>
+                            )
+                        }
+
+                    </div>
+                </div>
+                <div className="feild flex__center">
+                    <div>
+                        {
+                            (editHistory) ? (
+                                <textarea type='text' id='therapist__field' value={history} onChange={(e) => setHistory(e.target.value)}></textarea>
+                            ) : (
+                                <p>{history}</p>
+                            )
+                        }
+                    </div>
+                    <div>
+                        {
+                            (editHistory) ? (
+                                <div>
+
+                                    <button onClick={() => setEditHistory(false)}>
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" className='edit__img'><rect x="7" y="14" width="4" height="4" /><path d="M20.12,8.71,15.29,3.88A3,3,0,0,0,13.17,3H10V9h5a1,1,0,0,1,0,2H9a1,1,0,0,1-1-1V3H6A3,3,0,0,0,3,6V18a3,3,0,0,0,3,3H8V17a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2v4h2a3,3,0,0,0,3-3V10.83A3,3,0,0,0,20.12,8.71Z" transform="translate(-3 -3)" /></svg>
+                                    </button>
+                                    <button onClick={() => setEditHistory(false)}>
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.99 14.99" className='edit__img'><path d="M8,.5a7.5,7.5,0,1,0,5.3,2.2A7.44,7.44,0,0,0,8,.5Zm0,1A6.51,6.51,0,1,1,1.5,8c0-.21,0-.42,0-.62A6.48,6.48,0,0,1,8,1.5ZM10.47,5h0a.53.53,0,0,0-.34.15L8,7.29,5.88,5.17A.55.55,0,0,0,5.52,5a.5.5,0,0,0-.35.86L7.29,8,5.17,10.12a.5.5,0,0,0,.69.72h0L8,8.71l2.12,2.12a.5.5,0,0,0,.71,0,.49.49,0,0,0,0-.7v0L8.71,8l2.12-2.12a.5.5,0,0,0,0-.71A.46.46,0,0,0,10.47,5Z" transform="translate(-0.5 -0.5)" /></svg>
+                                    </button>
+                                </div>
+                            ) : (
+                                <button onClick={() => setEditHistory(true)}>
+                                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" className='edit__img' style={{ fill: "#A9A9A9" }}><path d="M3,17.46v3a.5.5,0,0,0,.5.5h3a.47.47,0,0,0,.35-.15L17.81,9.94,14.06,6.19,3.15,17.1A.49.49,0,0,0,3,17.46ZM20.71,7a1,1,0,0,0,0-1.41L18.37,3.29a1,1,0,0,0-1.41,0L15.13,5.12l3.75,3.75Z" transform="translate(-3 -3)" /></svg>
+                                </button>
+                            )
+                        }
+
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

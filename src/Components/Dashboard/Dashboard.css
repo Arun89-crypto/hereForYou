@@ -87,6 +87,11 @@
   background: linear-gradient(to left, #2c5364, #203a43, #0f2027);
   border-radius: 20px;
   color: white;
+  justify-content: space-between;
+}
+.counter__sessions {
+  font-size: 25px;
+  font-weight: bold;
 }
 .info__d h2 {
   font-size: 30px;
@@ -186,7 +191,6 @@
   display: none !important;
 }
 /* Graph  */
-
 .graph__d {
   min-height: 100vh;
   min-width: 100%;
@@ -349,4 +353,48 @@
     width: 100%;
     height: 100%;
   }
+}
+/* INFO PAGE */
+.info__page {
+  width: 95%;
+  min-height: 100vh;
+  padding: 2.5%;
+}
+.info__portal {
+  flex-direction: column;
+}
+.edit__img {
+  width: 20px;
+}
+.feild {
+  width: 100%;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+.feild input,
+.feild textarea {
+  border: none;
+  background: none;
+  border: 1px solid rgb(165, 165, 165);
+  padding: 15px;
+  border-radius: 30px;
+  min-width: 250px;
+}
+.feild input:focus,
+.feild textarea:focus {
+  outline: none;
+  border: 1px solid rgb(0, 0, 0);
+}
+.feild button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+}
+.feild button:hover {
+  background: #dddddd;
+}
+.feild > div {
+  display: flex;
 }
