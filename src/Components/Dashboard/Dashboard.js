@@ -198,7 +198,7 @@ function Dashboard() {
                                 {
                                     emojis.map((e) => {
                                         return (
-                                            <button >{e}</button>
+                                            <button>{e}</button>
                                         )
                                     })
                                 }
@@ -365,6 +365,7 @@ const InfoPage = () => {
         <div className="info__page" id='info__d'>
             <h1>Info</h1>
             <div className="info__portal flex__center">
+                <p className="field__title">Name</p>
                 <div className="feild flex__center">
                     <div>
                         {
@@ -396,6 +397,7 @@ const InfoPage = () => {
 
                     </div>
                 </div>
+                <p className="field__title">Phone Number</p>
                 <div className="feild flex__center">
                     <div>
                         {
@@ -427,6 +429,7 @@ const InfoPage = () => {
 
                     </div>
                 </div>
+                <p className="field__title">Age</p>
                 <div className="feild flex__center">
                     <div>
                         {
@@ -458,6 +461,7 @@ const InfoPage = () => {
 
                     </div>
                 </div>
+                <p className="field__title">Language preference</p>
                 <div className="feild flex__center">
                     <div>
                         {
@@ -489,6 +493,7 @@ const InfoPage = () => {
 
                     </div>
                 </div>
+                <p className="field__title">Gender preference (Therapist)</p>
                 <div className="feild flex__center">
                     <div>
                         {
@@ -520,6 +525,7 @@ const InfoPage = () => {
 
                     </div>
                 </div>
+                <p className="field__title">Any Medical history</p>
                 <div className="feild flex__center">
                     <div>
                         {

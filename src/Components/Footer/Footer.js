@@ -27,7 +27,7 @@ function Footer() {
                         <Link to='/events' style={{ textDecoration: 'none' }} className='nav__link'>
                             Events
                         </Link>
-                        <Link to='/admin' style={{ textDecoration: 'none' }} className='nav__link'>
+                        <Link to='/adminpage' style={{ textDecoration: 'none' }} className='nav__link'>
                             Admin
                         </Link>
                     </div>

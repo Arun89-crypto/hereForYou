@@ -1,0 +1,54 @@
+.user_info {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  padding: 2.5%;
+  margin: 2.5%;
+}
+.user_info > div {
+  width: 45%;
+  padding: 2.5%;
+}
+.user_info button {
+  width: 50px;
+  height: 50px;
+  margin: 10px 0px;
+  font-size: 30px;
+  margin-right: 5px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.user_info button:hover {
+  background: white;
+  color: black;
+}
+.therapy {
+  background: #4ecdc4;
+  border-radius: 25px;
+  padding: 2.5%;
+  width: 90%;
+  margin: 2.5%;
+  font-size: 25px;
+  font-weight: bold;
+}
+.therapy p {
+  padding: 2.5%;
+}
+form {
+  flex-direction: column;
+  width: 100%;
+}
+form input,
+form button {
+  width: 50%;
+  padding: 10px;
+  margin: 10px;
+}
+.pass__alert {
+  color: red;
+  font-size: 12px;
+}

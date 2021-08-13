@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AboutPage from './Components/AboutPage/AboutPage';
+import AdminPage from './Components/AdminPage/AdminPage';
 import BlogsPage from './Components/BlogsPage';
 import Dashboard from './Components/Dashboard/Dashboard';
 import EventsPage from './Components/EventsPage/EventsPage';
@@ -10,12 +11,14 @@ import PolicyPage from './Components/PolicyPage';
 import SelfHelp from './Components/SelfHelp/SelfHelp';
 import TermPage from './Components/TermPage';
 
-
 function App() {
   return (
     <Router >
       <>
         <Switch>
+          <Route path='/adminpage'>
+            <AdminPage />
+          </Route>
           <Route path='/policypage'>
             <PolicyPage />
           </Route>

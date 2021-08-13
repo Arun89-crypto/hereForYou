@@ -361,7 +361,13 @@
   padding: 2.5%;
 }
 .info__portal {
+  align-items: flex-start;
   flex-direction: column;
+  margin-top: 5%;
+}
+.field__title {
+  font-size: 10px;
+  color: grey;
 }
 .edit__img {
   width: 20px;
