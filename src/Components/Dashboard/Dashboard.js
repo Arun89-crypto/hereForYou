@@ -103,7 +103,7 @@ const emojis = [
     {
         id: 9,
         emoji: '😂',
-    },
+    }
 ]
 const coupons = [
     {
