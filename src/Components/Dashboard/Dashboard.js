@@ -23,11 +23,6 @@ const data = [
         date: '13/07/21'
     },
     {
-        id: 3,
-        score: 10,
-        date: '14/07/21'
-    },
-    {
         id: 4,
         score: 4,
         date: '15/07/21'
@@ -38,19 +33,9 @@ const data = [
         date: '16/07/21'
     },
     {
-        id: 6,
-        score: 8,
-        date: '17/07/21'
-    },
-    {
         id: 7,
         score: 6,
         date: '18/07/21'
-    },
-    {
-        id: 8,
-        score: 8,
-        date: '19/07/21'
     },
     {
         id: 9,
@@ -64,46 +49,9 @@ const data = [
     }
 ]
 const emojis = [
-    {
-        id: 0,
-        emoji: '😡',
-    },
-    {
-        id: 1,
-        emoji: '😠',
-    },
-    {
-        id: 2,
-        emoji: '😭',
-    },
-    {
-        id: 3,
-        emoji: '😢',
-    },
-    {
-        id: 4,
-        emoji: '😞',
-    },
-    {
-        id: 5,
-        emoji: '🙂',
-    },
-    {
-        id: 6,
-        emoji: '😊',
-    },
-    {
-        id: 7,
-        emoji: '😃',
-    },
-    {
-        id: 8,
-        emoji: '😇',
-    },
-    {
-        id: 9,
-        emoji: '😂',
-    }
+    '😡',
+    '😠',
+    '😭', '😢', '😞', '🙂'
 ]
 const coupons = [
     {
@@ -150,10 +98,14 @@ const cards = [
     },
 ]
 function Dashboard() {
-
+    const handleEmojiClick = (value) => {
+        //to backend function(time clicked and all that data)
+        //use the value in the function {value = index of the element in the array}
+        setInsert(false);
+    }
     useEffect(() => {
         const timer = setTimeout(() => {
-            // setInsert(true);
+            setInsert(true);
         }, 3000);
         return () => clearTimeout(timer);
     }, []);
@@ -226,11 +178,11 @@ function Dashboard() {
                             <h1>How you feel today ?</h1>
                             <div className="emojis__div">
                                 {
-                                    emojis.map((e) => {
-                                        return (
-                                            <button>{e.emoji}</button>
-                                        )
-                                    })
+                                    emojis.map((e, index) =>
+                                        <button onClick={() => {
+                                            handleEmojiClick(index);
+                                        }}>{e}</button>
+                                    )
                                 }
                             </div>
                         </div>
@@ -286,11 +238,7 @@ const GraphPage = () => {
                             '😭',
                             '😢',
                             '😞',
-                            '🙂',
-                            '😊',
-                            '😃',
-                            '😇',
-                            '😂'
+                            '🙂'
                         ],
                         datasets: [
                             {
