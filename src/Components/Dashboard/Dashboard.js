@@ -243,7 +243,7 @@ const GraphPage = () => {
                         datasets: [
                             {
                                 label: 'Mood Radar',
-                                data: [10, 2, 1, 20, 12, 6, 8, 17, 20, 21],
+                                data: [10, 2, 1, 20, 12, 6],
                                 fill: true,
                                 backgroundColor: 'rgba(255,107,107, 0.2)',
                                 borderColor: '#ff6b6b',
