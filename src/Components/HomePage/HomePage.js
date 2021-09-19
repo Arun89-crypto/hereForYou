@@ -170,12 +170,8 @@ function HomePage() {
                 (assesment) ? (<SelfAssesment setAssesment={setAssesment} />) : ''
             }
             <GoToTop />
-            <div id="hexagon">
-                <img src={(nav) ? Close : Menu} alt='' onClick={
-                    () => {
-                        setNav(!nav);
-                    }
-                }></img>
+            <div className={(!nav) ? 'menu-btn' : 'menu-btn open'} onClick={() => setNav(!nav)} id='hexagon'>
+                <div className="menu-btn__burger"></div>
             </div>
             <Link to='/dashboard'>
                 <div className="account__header flex__spacebetween">
@@ -185,67 +181,59 @@ function HomePage() {
                 </div>
             </Link>
             {
-                (signIn) ? (
-                    <SignIn setSignIn={setSignIn} />
-                ) : ''
+                <SignIn setSignIn={setSignIn} signIn={signIn} />
             }
             {
-                (signUp) ? (
-                    <SignUp setSignUp={setSignUp} />
-                ) : ''
+                <SignUp setSignUp={setSignUp} signUp={signUp} />
             }
-            {
-                (nav) ? (
-                    <div className="navbar">
-                        <img src={Logo} alt=''></img>
-                        <div>
-                            <AppLink
-                                smooth
-                                to="/#whyus"
-                                style={{ textDecoration: 'none' }} className='nav__link'
-                                onClick={() => setNav(false)}
-                            >
-                                Why Us ?
-                                <div className='underline'></div>
-                            </AppLink>
-                            <Link to='/blogpage' style={{ textDecoration: 'none' }} className='nav__link'>
-                                Blogs
-                                <div className='underline'></div>
-                            </Link>
-                            <Link to='/selfhelp' style={{ textDecoration: 'none' }} className='nav__link'>
-                                Self Help
-                                <div className='underline'></div>
-                            </Link>
-                            <Link to='/about' style={{ textDecoration: 'none' }} className='nav__link'>
-                                About
-                                <div className='underline'></div>
-                            </Link>
-                            <Link to='/events' style={{ textDecoration: 'none' }} className='nav__link'>
-                                Events
-                                <div className='underline'></div>
-                            </Link>
-                            <AppLink
-                                smooth
-                                to="/#faqs"
-                                style={{ textDecoration: 'none' }} className='nav__link'
-                                onClick={() => setNav(false)}
-                            >
-                                FAQ's
-                                <div className='underline'></div>
-                            </AppLink>
-                            <AppLink
-                                smooth
-                                to='/#plans'
-                                style={{ textDecoration: 'none' }} className='nav__link'
-                                onClick={() => setNav(false)}
-                            >
-                                Plans
-                                <div className='underline'></div>
-                            </AppLink>
-                        </div>
-                    </div>
-                ) : ''
-            }
+            <div className="navbar" style={{ transform: `translateX(${(nav) ? '0%' : '200%'})`, transition: 'all 0.3s ease' }}>
+                <img src={Logo} alt=''></img>
+                <div>
+                    <AppLink
+                        smooth
+                        to="/#whyus"
+                        style={{ textDecoration: 'none' }} className='nav__link'
+                        onClick={() => setNav(false)}
+                    >
+                        Why Us ?
+                        <div className='underline'></div>
+                    </AppLink>
+                    <Link to='/blogpage' style={{ textDecoration: 'none' }} className='nav__link'>
+                        Blogs
+                        <div className='underline'></div>
+                    </Link>
+                    <Link to='/selfhelp' style={{ textDecoration: 'none' }} className='nav__link'>
+                        Self Help
+                        <div className='underline'></div>
+                    </Link>
+                    <Link to='/about' style={{ textDecoration: 'none' }} className='nav__link'>
+                        About
+                        <div className='underline'></div>
+                    </Link>
+                    <Link to='/events' style={{ textDecoration: 'none' }} className='nav__link'>
+                        Events
+                        <div className='underline'></div>
+                    </Link>
+                    <AppLink
+                        smooth
+                        to="/#faqs"
+                        style={{ textDecoration: 'none' }} className='nav__link'
+                        onClick={() => setNav(false)}
+                    >
+                        FAQ's
+                        <div className='underline'></div>
+                    </AppLink>
+                    <AppLink
+                        smooth
+                        to='/#plans'
+                        style={{ textDecoration: 'none' }} className='nav__link'
+                        onClick={() => setNav(false)}
+                    >
+                        Plans
+                        <div className='underline'></div>
+                    </AppLink>
+                </div>
+            </div>
         </div>
     );
 }

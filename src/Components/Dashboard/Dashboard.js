@@ -14,44 +14,47 @@ import Info from '../../assets/info.svg';
 const data = [
     {
         id: 1,
-        score: 1,
+        score: 0,
         date: '12/07/21'
     },
     {
         id: 2,
-        score: 4,
+        score: 3,
         date: '13/07/21'
     },
     {
         id: 4,
-        score: 4,
+        score: 3,
         date: '15/07/21'
     },
     {
         id: 5,
-        score: 2,
+        score: 1,
         date: '16/07/21'
     },
     {
         id: 7,
-        score: 6,
+        score: 5,
         date: '18/07/21'
     },
     {
         id: 9,
-        score: 4,
+        score: 3,
         date: '20/07/21'
     },
     {
         id: 10,
-        score: 6,
+        score: 5,
         date: '21/07/21'
     }
 ]
 const emojis = [
     '😡',
     '😠',
-    '😭', '😢', '😞', '🙂'
+    '😭',
+    '😢',
+    '😞',
+    '🙂'
 ]
 const coupons = [
     {
@@ -113,7 +116,7 @@ function Dashboard() {
     return (
         <div className="dashboard flex__spacebetween">
             <div className="navigation__bar__d flex__center">
-                <div>
+                <div className='flex__center__vert'>
                     <AppLink
                         smooth
                         to="/dashboard/#main__d"
@@ -194,8 +197,8 @@ function Dashboard() {
 }
 const Main = () => {
     return (
-        <div id='main__d' className="main__d flex__center">
-            <div className="info__d flex__center">
+        <div id='main__d' className="main__d flex__spacebetween">
+            <div className="info__d flex__spacebetween">
                 <div>
                     <h2>Name</h2>
                     <p>E-mail</p>
@@ -227,9 +230,20 @@ const Main = () => {
     )
 }
 const GraphPage = () => {
+
+    const [Data, setData] = useState([]);
+    const emoData = data;
+    let emojiArray = [0, 0, 0, 0, 0, 0];
+    for (let i = 0; i < emoData.length; i++) {
+        emojiArray[emoData[i].score] += 1;
+    }
+    useEffect(() => {
+        setData(emojiArray)
+    }, []);
     return (
         <>
-            <div id='graph__d'>
+            <h1 className='heading__graph' id='graph__d'>Mood Graph</h1>
+            <div>
                 <Line
                     data={{
                         labels: [
@@ -243,7 +257,7 @@ const GraphPage = () => {
                         datasets: [
                             {
                                 label: 'Mood Radar',
-                                data: [10, 2, 1, 20, 12, 6],
+                                data: Data,
                                 fill: true,
                                 backgroundColor: 'rgba(255,107,107, 0.2)',
                                 borderColor: '#ff6b6b',
@@ -285,8 +299,8 @@ const GraphPage = () => {
                     data.map((e) => {
                         const { id, score, date } = e;
                         return (
-                            <div className='score__card flex__center' key={id}>
-                                <p>{emojis[score - 1]}</p>
+                            <div className='score__card flex__center' key={id} onClick={() => { }}>
+                                <p>{emojis[score]}</p>
                                 <p className="date__d">{date}</p>
                             </div>
                         )
@@ -536,6 +550,7 @@ const InfoPage = () => {
                     </div>
                 </div>
             </div>
+            <button className='delete__account__button'>Delete Account</button>
         </div>
     )
 }

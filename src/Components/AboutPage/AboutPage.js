@@ -77,38 +77,30 @@ function AboutPage() {
     }, [data])
     return (
         <>
-            <div id="hexagon">
-                <img src={(nav) ? Close : Menu} alt='' onClick={
-                    () => {
-                        setNav(!nav);
-                    }
-                }></img>
+            <div className={(!nav) ? 'menu-btn' : 'menu-btn open'} onClick={() => setNav(!nav)} id='hexagon'>
+                <div className="menu-btn__burger"></div>
             </div>
-            {
-                (nav) ? (
-                    <div className="navbar">
-                        <div>
-                            <Link
-                                smooth
-                                to="/"
-                                style={{ textDecoration: 'none' }} className='nav__link'
-                                onClick={() => setNav(false)}
-                            >
-                                Home
-                                <div className='underline'></div>
-                            </Link>
-                            <Link to='/selfhelp' style={{ textDecoration: 'none' }} className='nav__link'>
-                                Self Help
-                                <div className='underline'></div>
-                            </Link>
-                            <Link to='/events' style={{ textDecoration: 'none' }} className='nav__link'>
-                                Events
-                                <div className='underline'></div>
-                            </Link>
-                        </div>
-                    </div>
-                ) : ''
-            }
+            <div className="navbar" style={{ transform: `translateX(${(nav) ? '0%' : '200%'})`, transition: 'all 0.3s ease' }}>
+                <div>
+                    <Link
+                        smooth
+                        to="/"
+                        style={{ textDecoration: 'none' }} className='nav__link'
+                        onClick={() => setNav(false)}
+                    >
+                        Home
+                        <div className='underline'></div>
+                    </Link>
+                    <Link to='/selfhelp' style={{ textDecoration: 'none' }} className='nav__link'>
+                        Self Help
+                        <div className='underline'></div>
+                    </Link>
+                    <Link to='/events' style={{ textDecoration: 'none' }} className='nav__link'>
+                        Events
+                        <div className='underline'></div>
+                    </Link>
+                </div>
+            </div>
             <div className="about__header flex__center">
                 <h1>About</h1>
             </div>

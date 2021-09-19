@@ -13,7 +13,55 @@
   align-items: center;
   justify-content: space-between;
 }
-
+/* NAVBAR  */
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  z-index: 3;
+  background: #ff6b6b;
+  display: none;
+  border-radius: 10px;
+}
+.menu-btn__burger {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  left: 12.5px;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-8px);
+}
+.menu-btn__burger::after {
+  transform: translateY(8px);
+}
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
 /* Main Page  */
 .main__page {
   height: 90vh;
@@ -39,7 +87,7 @@
   align-items: center;
 }
 .main__button__section button {
-  padding: 10px 15px;
+  padding: 15px 25px;
   margin: 10px;
 }
 .button__signin,
@@ -48,7 +96,7 @@
   border: 2px solid white;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 15px;
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -283,6 +331,8 @@
   padding: 2.5%;
   background: url("./assets/bg/bg.png") center center;
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 .upper__why__page {
   padding: 2%;
@@ -333,21 +383,26 @@
   width: 180px;
   min-width: 180px;
   min-height: 180px;
-  background: #4ecdc4;
+  background: none;
+  border: 2px solid rgb(35, 35, 35);
   display: flex;
   align-items: center;
   justify-content: center;
+  color: rgb(35, 35, 35);
   margin: 1%;
   text-align: center;
   border-radius: 10px;
   transition: all 0.3s ease;
+  cursor: pointer;
   padding: 1%;
 }
 .dealin__card > h3 {
-  font-size: 12px;
+  font-size: 15px;
 }
 .dealin__card:hover {
   transform: scale(1.1);
+  background: rgb(35, 35, 35);
+  color: #fff;
 }
 @media screen and (max-width: 1200px) {
   .right__upper__why {
@@ -469,7 +524,7 @@
   padding: 2%;
   background: white;
   border-radius: 10px;
-  background: #4ecdc4;
+  background: #e9ecef;
   margin-top: 1%;
 }
 @media screen and (max-width: 500px) {
@@ -509,6 +564,7 @@
   justify-content: space-between;
   border-radius: 10px;
   position: relative;
+  transform: translateX();
 }
 .plan__card > h1 {
   padding: 5%;
@@ -528,6 +584,8 @@
   padding: 2.5%;
   background: url("./assets/bg/bgplan.png") center;
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 .plans__section > h1 {
   font-size: 50px;

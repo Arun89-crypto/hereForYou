@@ -3,9 +3,9 @@ import Facebook from '../assets/facebook.png';
 import Google from '../assets/google.png';
 import Close from '../assets/close.png';
 
-function SignIn({ setSignIn }) {
+function SignIn({ setSignIn, signIn }) {
     return (
-        <div className="signin__page flex__center">
+        <div className="signin__page flex__center" style={{ transform: `translateX(${(signIn) ? '0%' : '-100%'})`, transition: 'all 0.3s ease' }}>
             <div className="direct__sigin__buttons flex__spacebetween">
                 <h3>Sign In with Facebook</h3>
                 <img src={Facebook} alt=''></img>

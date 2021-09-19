@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import Menu from '../../assets/menu.svg';
-import Close from '../../assets/close.png';
 import Logo from '../../assets/logo.svg';
 import { HashLink as AppLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
@@ -14,13 +12,11 @@ function SelfHelp() {
     const [nav, setNav] = useState(false);
     return (
         <div className="self__help__section">
-            <div id="hexagon">
-                <img src={(nav) ? Close : Menu} alt='' onClick={() => setNav(!nav)}></img>
+            <div className={(!nav) ? 'menu-btn' : 'menu-btn open'} onClick={() => setNav(!nav)} id='hexagon'>
+                <div className="menu-btn__burger"></div>
             </div>
             {
-                (nav) ? (
-                    <Navbar setNav={setNav} />
-                ) : ''
+                <Navbar setNav={setNav} nav={nav} />
             }
             <div className="self__help__main flex__spacebetween" id='selfpage'>
                 <div>
@@ -38,9 +34,9 @@ function SelfHelp() {
     )
 }
 
-const Navbar = ({ setNav }) => {
+const Navbar = ({ setNav, nav }) => {
     return (
-        <div className="navbar">
+        <div className="navbar" style={{ transform: `translateX(${(nav) ? '0%' : '200%'})`, transition: 'all 0.3s ease' }}>
             <img src={Logo} alt=''></img>
             <div>
                 <Link to='/' style={{ textDecoration: 'none' }} className='nav__link'>
