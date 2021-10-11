@@ -9,6 +9,5 @@ export default function GoToTop() {
     useEffect(() => {
         onTop()
     }, [routePath]);
-
     return null;
 }

@@ -184,6 +184,7 @@ function Dashboard() {
                                     emojis.map((e, index) =>
                                         <button onClick={() => {
                                             handleEmojiClick(index);
+                                            console.log(index);
                                         }}>{e}</button>
                                     )
                                 }
